@@ -25,8 +25,8 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="星空下的遐想              body {             margin: 0;             overflow: hidden;             background: #000033;         }         canvas {             display: block;         }">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-03-30T15:12:25.894Z">
-<meta property="article:modified_time" content="2025-03-30T15:12:25.894Z">
+<meta property="article:published_time" content="2025-03-30T15:43:33.272Z">
+<meta property="article:modified_time" content="2025-03-30T15:43:33.272Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
     
@@ -496,7 +496,9 @@
         const canvas = document.getElementById('starry-sky');
         const ctx = canvas.getContext('2d');
         const stars = [];
+        const meteors = [];
         const numStars = 300;
+        const numMeteors = 5;
         const starSpeed = 0.3;
 
         // 设置画布大小
@@ -513,28 +515,68 @@
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 size: Math.random() * 2,
-                speed: Math.random() * starSpeed,
                 brightness: Math.random()
             });
         }
 
+        // 创建流星
+        function createMeteor() {
+            return {
+                x: Math.random() * canvas.width + canvas.width/2, // 从右半边开始
+                y: Math.random() * canvas.height/2, // 从上半部分开始
+                length: 80 + Math.random() * 40, // 流星长度
+                speed: 15 + Math.random() * 10,
+                angle: -Math.PI/6 - Math.random() * Math.PI/6 // 向左下方运动
+            };
+        }
+
+        // 初始化流星
+        for (let i = 0; i < numMeteors; i++) {
+            meteors.push(createMeteor());
+        }
+
         // 动画循环
         function animate() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.fillStyle = '#000033';
+            ctx.fillStyle = 'rgba(0, 0, 51, 0.2)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+            // 绘制星星
             stars.forEach(star => {
                 ctx.beginPath();
                 ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(255, 255, 255, ${star.brightness})`;
                 ctx.fill();
+            });
 
-                star.y += star.speed;
-                if (star.y > canvas.height) {
-                    star.y = 0;
-                    star.x = Math.random() * canvas.width;
-                    star.brightness = Math.random();
+            // 绘制流星
+            meteors.forEach((meteor, index) => {
+                // 创建流星的渐变色
+                let gradient = ctx.createLinearGradient(
+                    meteor.x,
+                    meteor.y,
+                    meteor.x + Math.cos(meteor.angle) * meteor.length,
+                    meteor.y + Math.sin(meteor.angle) * meteor.length
+                );
+                gradient.addColorStop(0, 'rgba(255, 255, 255, 0.8)');
+                gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+                ctx.beginPath();
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = 2;
+                ctx.moveTo(meteor.x, meteor.y);
+                ctx.lineTo(
+                    meteor.x + Math.cos(meteor.angle) * meteor.length,
+                    meteor.y + Math.sin(meteor.angle) * meteor.length
+                );
+                ctx.stroke();
+
+                // 更新流星位置
+                meteor.x += Math.cos(meteor.angle) * meteor.speed;
+                meteor.y += Math.sin(meteor.angle) * meteor.speed;
+
+                // 如果流星移出画布，重新创建一个
+                if (meteor.x < -meteor.length || meteor.y > canvas.height + meteor.length) {
+                    meteors[index] = createMeteor();
                 }
             });
 
