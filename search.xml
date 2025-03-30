@@ -1,6 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Meteor Shower</title>
+    <url>/2024/03/31/meteor-shower/</url>
+    <content><![CDATA[<div class="meteor-container">
+  <div class="stars"></div>
+  <div class="meteors"></div>
+  <div class="content">
+    <h1>Meteor Shower</h1>
+    <p>Watch the beautiful meteor shower in the night sky</p>
+  </div>
+</div>
+
+<style>
+.meteor-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #1a1a1a, #000033);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48L3N2Zz4=');
+  animation: twinkle 4s infinite;
+}
+
+.meteors {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.meteor {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  animation: meteor 3s linear infinite;
+}
+
+.meteor::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, #fff, transparent);
+  transform: translateX(-100%);
+  animation: meteor-trail 3s linear infinite;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding-top: 20vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.content h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.content p {
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes meteor {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) translateY(200%) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+@keyframes meteor-trail {
+  0% {
+    width: 0;
+    opacity: 1;
+  }
+  70% {
+    width: 100px;
+    opacity: 1;
+  }
+  100% {
+    width: 0;
+    opacity: 0;
+  }
+}
+</style>
+
+<script>
+function createMeteor() {
+  const meteor = document.createElement('div');
+  meteor.className = 'meteor';
+  
+  // Random starting position
+  meteor.style.left = Math.random() * 100 + '%';
+  meteor.style.top = Math.random() * 100 + '%';
+  
+  // Random animation duration
+  meteor.style.animationDuration = (Math.random() * 2 + 2) + 's';
+  
+  // Random delay
+  meteor.style.animationDelay = Math.random() * 2 + 's';
+  
+  document.querySelector('.meteors').appendChild(meteor);
+  
+  // Remove meteor after animation
+  meteor.addEventListener('animationend', () => {
+    meteor.remove();
+  });
+}
+
+// Create meteors periodically
+setInterval(createMeteor, 300);
+
+// Create initial meteors
+for (let i = 0; i < 5; i++) {
+  setTimeout(createMeteor, i * 500);
+}
+</script> ]]></content>
+      <categories>
+        <category>Life</category>
+      </categories>
+      <tags>
+        <tag>Animation</tag>
+        <tag>Space</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Welcome to My Blog</title>
     <url>/2024/10/04/hello-blog/</url>
     <content><![CDATA[<h2 id="大家好，我是-Gskyer！"><a href="#大家好，我是-Gskyer！" class="headerlink" title="大家好，我是 Gskyer！"></a>大家好，我是 Gskyer！</h2><p>欢迎来到我的个人博客！</p>
