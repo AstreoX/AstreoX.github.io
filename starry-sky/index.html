@@ -18,15 +18,15 @@
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="星空下的遐想              body {             margin: 0;             overflow: hidden;             background: #000033;         }         canvas {             display: block;         }">
+        <meta name="description" content="星空下的遐想              body {             margin: 0;             overflow: hidden;             background: #000033;             position: relative;         }         .background {">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="https://astreox.github.io/starry-sky/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="星空下的遐想              body {             margin: 0;             overflow: hidden;             background: #000033;         }         canvas {             display: block;         }">
+<meta property="og:description" content="星空下的遐想              body {             margin: 0;             overflow: hidden;             background: #000033;             position: relative;         }         .background {">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-03-30T15:43:33.272Z">
-<meta property="article:modified_time" content="2025-03-30T15:43:33.272Z">
+<meta property="article:published_time" content="2025-03-30T15:47:43.756Z">
+<meta property="article:modified_time" content="2025-03-30T15:47:43.756Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
     
@@ -436,9 +436,24 @@
             margin: 0;
             overflow: hidden;
             background: #000033;
+            position: relative;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image: url('https://images.unsplash.com/photo-1475090169767-40ed8d18f67d?q=80&w=2832&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
         }
         canvas {
             display: block;
+            position: relative;
+            z-index: 1;
         }
         .content {
             position: fixed;
@@ -447,12 +462,13 @@
             transform: translate(-50%, -50%);
             text-align: center;
             color: #ffffff;
-            z-index: 1;
+            z-index: 2;
             max-width: 800px;
             padding: 20px;
-            background-color: rgba(0, 0, 51, 0.7);
+            background-color: rgba(0, 0, 51, 0.5);
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
         }
         h1 {
             font-size: 2.5em;
@@ -476,6 +492,7 @@
             border-radius: 5px;
             transition: background-color 0.3s;
             z-index: 2;
+            backdrop-filter: blur(5px);
         }
         .back-button:hover {
             background-color: rgba(255, 255, 255, 0.3);
@@ -483,6 +500,7 @@
     </style>
 </head>
 <body>
+    <div class="background"></div>
     <canvas id="starry-sky"></canvas>
     <div class="content">
         <h1>星空下的遐想</h1>
@@ -497,8 +515,8 @@
         const ctx = canvas.getContext('2d');
         const stars = [];
         const meteors = [];
-        const numStars = 300;
-        const numMeteors = 5;
+        const numStars = 200;
+        const numMeteors = 3;
         const starSpeed = 0.3;
 
         // 设置画布大小
@@ -514,19 +532,20 @@
             stars.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                size: Math.random() * 2,
-                brightness: Math.random()
+                size: Math.random() * 1.5,
+                brightness: Math.random() * 0.5 + 0.3
             });
         }
 
         // 创建流星
         function createMeteor() {
             return {
-                x: Math.random() * canvas.width + canvas.width/2, // 从右半边开始
-                y: Math.random() * canvas.height/2, // 从上半部分开始
-                length: 80 + Math.random() * 40, // 流星长度
-                speed: 15 + Math.random() * 10,
-                angle: -Math.PI/6 - Math.random() * Math.PI/6 // 向左下方运动
+                x: Math.random() * canvas.width + canvas.width/2,
+                y: Math.random() * canvas.height/2,
+                length: 100 + Math.random() * 50,
+                speed: 10 + Math.random() * 8,
+                angle: -Math.PI/6 - Math.random() * Math.PI/6,
+                opacity: Math.random() * 0.3 + 0.5
             };
         }
 
@@ -537,7 +556,7 @@
 
         // 动画循环
         function animate() {
-            ctx.fillStyle = 'rgba(0, 0, 51, 0.2)';
+            ctx.fillStyle = 'rgba(0, 0, 51, 0.1)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
             // 绘制星星
@@ -546,18 +565,21 @@
                 ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(255, 255, 255, ${star.brightness})`;
                 ctx.fill();
+
+                // 添加星星闪烁效果
+                star.brightness += (Math.random() - 0.5) * 0.05;
+                star.brightness = Math.max(0.3, Math.min(0.8, star.brightness));
             });
 
             // 绘制流星
             meteors.forEach((meteor, index) => {
-                // 创建流星的渐变色
                 let gradient = ctx.createLinearGradient(
                     meteor.x,
                     meteor.y,
                     meteor.x + Math.cos(meteor.angle) * meteor.length,
                     meteor.y + Math.sin(meteor.angle) * meteor.length
                 );
-                gradient.addColorStop(0, 'rgba(255, 255, 255, 0.8)');
+                gradient.addColorStop(0, `rgba(255, 255, 255, ${meteor.opacity})`);
                 gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
 
                 ctx.beginPath();
@@ -570,11 +592,9 @@
                 );
                 ctx.stroke();
 
-                // 更新流星位置
                 meteor.x += Math.cos(meteor.angle) * meteor.speed;
                 meteor.y += Math.sin(meteor.angle) * meteor.speed;
 
-                // 如果流星移出画布，重新创建一个
                 if (meteor.x < -meteor.length || meteor.y > canvas.height + meteor.length) {
                     meteors[index] = createMeteor();
                 }
