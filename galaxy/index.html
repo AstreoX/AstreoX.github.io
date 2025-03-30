@@ -25,8 +25,8 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Galaxy Effect              * {             margin: 0;             padding: 0;             box-sizing: border-box;         }          body {             overflow: hidden;             b">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-03-30T15:28:20.358Z">
-<meta property="article:modified_time" content="2025-03-30T15:28:20.358Z">
+<meta property="article:published_time" content="2025-03-30T15:32:32.157Z">
+<meta property="article:modified_time" content="2025-03-30T15:32:32.157Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
     
@@ -443,6 +443,21 @@
             background: #000;
             position: relative;
             height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1506318137071-a8e63b074eb4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1;
         }
 
         #galaxy-canvas {
@@ -451,6 +466,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            z-index: 2;
         }
 
         .controls {
@@ -473,11 +489,13 @@
             transition: all 0.3s ease;
             font-family: Arial, sans-serif;
             backdrop-filter: blur(5px);
+            text-decoration: none;
         }
 
         .btn:hover {
             background: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
         }
 
         .nebula {
@@ -486,6 +504,7 @@
             filter: blur(60px);
             opacity: 0.3;
             animation: nebulaFloat 20s infinite alternate;
+            z-index: 3;
         }
 
         @keyframes nebulaFloat {
@@ -496,10 +515,57 @@
                 transform: translate(50px, 50px) scale(1.1);
             }
         }
+
+        .shooting-star {
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255,255,255,0.8), transparent);
+            animation: shootingStar 3s linear infinite;
+            z-index: 4;
+        }
+
+        @keyframes shootingStar {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(200%) translateY(200%) rotate(45deg);
+                opacity: 0;
+            }
+        }
+
+        .title {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3rem;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            z-index: 5;
+            text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            opacity: 0;
+            animation: fadeIn 2s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
     </style>
 </head>
 <body>
     <canvas id="galaxy-canvas"></canvas>
+    <h1 class="title">Galaxy Dreams</h1>
     <div class="controls">
         <a href="/" class="btn">返回主页</a>
         <button class="btn" onclick="toggleAnimation()">暂停/播放</button>
@@ -515,6 +581,20 @@
         const stars = [];
         const numStars = 1000;
         
+        // 创建流星
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.className = 'shooting-star';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.left = Math.random() * 100 + '%';
+            document.body.appendChild(star);
+            
+            // 动画结束后移除流星
+            star.addEventListener('animationend', () => {
+                star.remove();
+            });
+        }
+
         // 创建星云
         function createNebula() {
             const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEEAD'];
@@ -596,6 +676,14 @@
             }
         }
 
+        // 定期创建流星
+        function createShootingStars() {
+            if (isPlaying) {
+                createShootingStar();
+                setTimeout(createShootingStars, Math.random() * 3000 + 2000);
+            }
+        }
+
         // 初始化
         window.addEventListener('resize', resizeCanvas);
         resizeCanvas();
@@ -607,6 +695,7 @@
         }
 
         animate();
+        createShootingStars();
     </script>
 </body>
 </html> 
