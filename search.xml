@@ -1,6 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Welcome to My Blog</title>
+    <url>/2024/10/04/hello-blog/</url>
+    <content><![CDATA[<h2 id="大家好，我是-Gskyer！"><a href="#大家好，我是-Gskyer！" class="headerlink" title="大家好，我是 Gskyer！"></a>大家好，我是 Gskyer！</h2><p>欢迎来到我的个人博客！</p>
+<h3 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h3><p>在这个博客中，你将找到一些技术主题的分享，包括编程技巧、项目经验以及我的个人见解。我希望这些内容能对你有所帮助。</p>
+<h3 id="新访客指南"><a href="#新访客指南" class="headerlink" title="新访客指南"></a>新访客指南</h3><ul>
+<li><strong>浏览博客</strong>：你可以通过菜单栏浏览各类文章，或者使用搜索功能寻找特定主题。</li>
+<li><strong>评论</strong>：如果你对我的文章有任何想法或问题，欢迎在下方留言。这个博客使用 Waline 评论系统，你可以轻松地参与讨论。</li>
+</ul>
+<h3 id="Waline-评论系统使用指南"><a href="#Waline-评论系统使用指南" class="headerlink" title="Waline 评论系统使用指南"></a>Waline 评论系统使用指南</h3><p>Waline 是一个轻量级的评论系统，使用起来非常简单。以下是如何使用 Waline 的步骤：</p>
+<ol>
+<li><p><strong>发表评论</strong>：</p>
+<ul>
+<li>在每篇文章的底部，你会看到评论框。输入你的昵称、电子邮件（可选）和评论内容。</li>
+<li>点击“发送”按钮提交你的评论。</li>
+</ul>
+</li>
+<li><p><strong>查看评论</strong>：</p>
+<ul>
+<li>提交后，你的评论将显示在评论区。你可以随时返回来查看和回复其他人的评论。</li>
+</ul>
+</li>
+<li><p><strong>回复评论</strong>：</p>
+<ul>
+<li>如果你想回复某个评论，可以点击该评论下方的“回复”按钮，输入你的回复内容后提交。</li>
+</ul>
+</li>
+<li><p><strong>编辑和删除评论</strong>：</p>
+<ul>
+<li>提交后的评论旁边通常会有“编辑”和“删除”选项。点击相应按钮即可进行操作（前提是你有相应权限）。</li>
+</ul>
+</li>
+<li><p><strong>注意事项</strong>：</p>
+<ul>
+<li>请遵守社区规范，尊重他人，避免发布不当内容。</li>
+<li>如果遇到任何问题，欢迎随时联系我或查看 Waline 的官方文档。</li>
+</ul>
+</li>
+</ol>
+<h3 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h3><p>我想特别感谢 Hexo 框架和 Redefine 主题，提供了如此优秀的工具，使我能够轻松创建和管理我的博客。</p>
+<p>感谢你的光临，期待与你们的交流！</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>Welcome</tag>
+        <tag>self-introduction</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Meteor Shower</title>
     <url>/2024/03/31/meteor-shower/</url>
     <content><![CDATA[<div class="meteor-container">
@@ -149,56 +199,6 @@ for (let i = 0; i < 5; i++) {
       <tags>
         <tag>Animation</tag>
         <tag>Space</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Welcome to My Blog</title>
-    <url>/2024/10/04/hello-blog/</url>
-    <content><![CDATA[<h2 id="大家好，我是-Gskyer！"><a href="#大家好，我是-Gskyer！" class="headerlink" title="大家好，我是 Gskyer！"></a>大家好，我是 Gskyer！</h2><p>欢迎来到我的个人博客！</p>
-<h3 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h3><p>在这个博客中，你将找到一些技术主题的分享，包括编程技巧、项目经验以及我的个人见解。我希望这些内容能对你有所帮助。</p>
-<h3 id="新访客指南"><a href="#新访客指南" class="headerlink" title="新访客指南"></a>新访客指南</h3><ul>
-<li><strong>浏览博客</strong>：你可以通过菜单栏浏览各类文章，或者使用搜索功能寻找特定主题。</li>
-<li><strong>评论</strong>：如果你对我的文章有任何想法或问题，欢迎在下方留言。这个博客使用 Waline 评论系统，你可以轻松地参与讨论。</li>
-</ul>
-<h3 id="Waline-评论系统使用指南"><a href="#Waline-评论系统使用指南" class="headerlink" title="Waline 评论系统使用指南"></a>Waline 评论系统使用指南</h3><p>Waline 是一个轻量级的评论系统，使用起来非常简单。以下是如何使用 Waline 的步骤：</p>
-<ol>
-<li><p><strong>发表评论</strong>：</p>
-<ul>
-<li>在每篇文章的底部，你会看到评论框。输入你的昵称、电子邮件（可选）和评论内容。</li>
-<li>点击“发送”按钮提交你的评论。</li>
-</ul>
-</li>
-<li><p><strong>查看评论</strong>：</p>
-<ul>
-<li>提交后，你的评论将显示在评论区。你可以随时返回来查看和回复其他人的评论。</li>
-</ul>
-</li>
-<li><p><strong>回复评论</strong>：</p>
-<ul>
-<li>如果你想回复某个评论，可以点击该评论下方的“回复”按钮，输入你的回复内容后提交。</li>
-</ul>
-</li>
-<li><p><strong>编辑和删除评论</strong>：</p>
-<ul>
-<li>提交后的评论旁边通常会有“编辑”和“删除”选项。点击相应按钮即可进行操作（前提是你有相应权限）。</li>
-</ul>
-</li>
-<li><p><strong>注意事项</strong>：</p>
-<ul>
-<li>请遵守社区规范，尊重他人，避免发布不当内容。</li>
-<li>如果遇到任何问题，欢迎随时联系我或查看 Waline 的官方文档。</li>
-</ul>
-</li>
-</ol>
-<h3 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h3><p>我想特别感谢 Hexo 框架和 Redefine 主题，提供了如此优秀的工具，使我能够轻松创建和管理我的博客。</p>
-<p>感谢你的光临，期待与你们的交流！</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>Welcome</tag>
-        <tag>self-introduction</tag>
       </tags>
   </entry>
 </search>
