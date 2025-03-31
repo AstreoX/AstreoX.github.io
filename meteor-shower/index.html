@@ -3,13 +3,15 @@
     <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
+      <title>Meteor Shower</title>
       <style>
         body {
           background-color: black;
           width: 100%;
           height: 100%;
           overflow: hidden;
+          margin: 0;
+          font-family: 'Noto Sans SC', sans-serif;
         }
         .star {
           position: absolute;
@@ -45,10 +47,58 @@
             opacity: 0.2;
           }
         }
+
+        .content {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          color: white;
+          z-index: 1;
+        }
+
+        .title {
+          font-size: 3rem;
+          margin-bottom: 1rem;
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .subtitle {
+          font-size: 1.5rem;
+          margin-bottom: 2rem;
+          opacity: 0.8;
+          text-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+        }
+
+        .home-button {
+          display: inline-block;
+          padding: 12px 24px;
+          background-color: rgba(255, 255, 255, 0.1);
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          color: white;
+          text-decoration: none;
+          border-radius: 25px;
+          transition: all 0.3s ease;
+          font-size: 1.1rem;
+          margin-top: 2rem;
+        }
+
+        .home-button:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+          border-color: rgba(255, 255, 255, 0.5);
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
       </style>
     </head>
     <body>
       <canvas id="Meteor"></canvas>
+      <div class="content">
+        <h1 class="title">繁星之梦</h1>
+        <p class="subtitle">每一颗流星都承载着希望，每一个夜晚都闪耀着梦想</p>
+        <a href="/" class="home-button">返回主页</a>
+      </div>
   
       <script type="text/javascript">
         var starCount = 300;
