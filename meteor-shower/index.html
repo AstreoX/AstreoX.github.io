@@ -26,7 +26,7 @@
 <meta property="og:description" content="Meteor Shower     Watch the beautiful meteor shower in the night sky       .meteor-container {   position: fixed;   top: 0;   left: 0;   width: 100vw;   height: 100vh;   background: line">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-03-30T16:27:01.083Z">
+<meta property="article:modified_time" content="2025-03-31T06:27:47.831Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
     
@@ -452,7 +452,14 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNmZmYiLz48L3N2Zz4=');
+  background: radial-gradient(2px 2px at 20px 30px, #fff, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 50px 160px, #fff, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+              radial-gradient(2px 2px at 160px 120px, #fff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
   animation: twinkle 4s infinite;
 }
 
@@ -464,8 +471,8 @@
 
 .meteor {
   position: absolute;
-  width: 2px;
-  height: 2px;
+  width: 1px;
+  height: 1px;
   background: #fff;
   border-radius: 50%;
   animation: meteor 3s linear infinite;
@@ -474,7 +481,7 @@
 .meteor::before {
   content: '';
   position: absolute;
-  width: 100px;
+  width: 150px;
   height: 1px;
   background: linear-gradient(90deg, #fff, transparent);
   transform: translateX(-100%);
@@ -526,7 +533,7 @@
     opacity: 1;
   }
   70% {
-    width: 100px;
+    width: 150px;
     opacity: 1;
   }
   100% {
@@ -560,11 +567,11 @@ function createMeteor() {
 }
 
 // Create meteors periodically
-setInterval(createMeteor, 300);
+setInterval(createMeteor, 200);
 
 // Create initial meteors
-for (let i = 0; i < 5; i++) {
-  setTimeout(createMeteor, i * 500);
+for (let i = 0; i < 8; i++) {
+  setTimeout(createMeteor, i * 300);
 }
 </script> 
         
