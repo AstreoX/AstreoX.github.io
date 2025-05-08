@@ -61,7 +61,7 @@
 <li><p><strong>《Hands-On Large Language Models》</strong></p>
 <p>这书倒是蛮新的，新到国内尚无中文译本（截至我们开课前2025.2.7）</p>
 <p>而且手把手教着搓大语言模型，实践性很强，有配套的Github代码仓库</p>
-<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/rasbt/LLMs-from-scratch</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/rasbt/LLMs-from-scratch</span><br></pre></td></tr></table></figure></div>
 
 
 </li>
@@ -78,7 +78,7 @@
 <p>一开课的惯例：课程介绍，老师介绍，大语言模型趋势，人工智能与机器学习的基本概念介绍</p>
 <p>一大堆介绍完之后，终于来到了大语言模型的简介。这也算是我最感兴趣的内容，从了解到大语言模型之日起（大概是在22年11月份刚刚使用过GPT后不久），我就一直非常好奇这种LLM究竟是怎样理解我们人类的语言的，之前只是模模糊糊知道一点关于“token”的事情，知道那是个大概的大模型拆分语言的单元，今天总算能从头到尾去彻底理解一下了</p>
 <p>（另外下面小小的感慨一下）</p>
-<p>PPT正文首页就是“60年的算法积累，辛顿位列C位，能在60年前人类的CPU才刚刚买入集成电路的时代的算力条件下有勇气去搞神经网络，“先驱”一词在他身上大概就是最好的体现。 （另外，对于辛顿有一篇文章写的特别好，可以来看看<a class="link" href="https://www.zhihu.com/question/493793998/answer/1901401663572538161">为什么有些人能够那么强大又那么温柔？ - 知乎 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>）</p>
+<p>PPT正文首页就是“60年的算法积累，辛顿位列C位，能在60年前人类的CPU才刚刚买入集成电路的时代的算力条件下有勇气去搞神经网络，“先驱”一词在他身上大概就是最好的体现。 （另外，对于辛顿有一篇文章写的特别好，可以来看看<a class="link" href="https://www.zhihu.com/question/493793998/answer/1901401663572538161">为什么有些人能够那么强大又那么温柔？ - 知乎<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</p>
 <p><img lazyload src="/images/loading.svg" data-src="20250508014658701.png"></p>
 <hr>
 <p>好了言归正传，让我们首先来从大语言模型的历史开始：</p>
