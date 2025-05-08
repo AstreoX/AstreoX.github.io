@@ -166,8 +166,8 @@
   <entry>
     <title>解决Windows环境下nodejieba安装问题</title>
     <url>/2025/05/08/%E8%A7%A3%E5%86%B3Windows%E7%8E%AF%E5%A2%83%E4%B8%8Bnodejieba%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h1 id="解决Windows环境下nodejieba安装问题"><a href="#解决Windows环境下nodejieba安装问题" class="headerlink" title="解决Windows环境下nodejieba安装问题"></a>解决Windows环境下nodejieba安装问题</h1><h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在使用Hexo博客系统的过程中，当主题需要使用中文分词功能时，常常会依赖<code>nodejieba</code>这个Node.js模块。<code>nodejieba</code>是”结巴”中文分词的Node.js实现，由底层C++库提供支持，提供高效的中文分词功能。然而，在Windows环境下安装<code>nodejieba</code>时，常常会遇到各种编译错误，特别是在使用较新版本的Node.js时。</p>
-<p>本文将详细记录我在Windows环境下遇到的<code>nodejieba</code>安装问题，以及如何通过创建兼容层来解决这个问题，使Hexo博客能够正常工作。</p>
+    <content><![CDATA[<h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在使用Hexo博客系统的过程中，当主题需要使用中文分词功能时，常常会依赖<code>nodejieba</code>这个Node.js模块。(主要为了做文章推荐) <code>nodejieba</code>是”结巴”中文分词的Node.js实现，由底层C++库提供支持，提供高效的中文分词功能。然而，在Windows环境下安装<code>nodejieba</code>时，常常会遇到各种编译错误，特别是在使用较新版本的Node.js时。（是的已红温）</p>
+<p>本文将详细记录我在Windows环境下遇到的<code>nodejieba</code>安装问题，以及借助AI与nodejieba斗智斗勇的过程——如何通过创建兼容层来解决这个问题，使Hexo博客能够正常工作。</p>
 <h2 id="错误现象"><a href="#错误现象" class="headerlink" title="错误现象"></a>错误现象</h2><p>在尝试使用<code>npm install nodejieba@latest</code>命令安装最新版本的<code>nodejieba</code>时，出现了以下编译错误：</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm error code 1</span><br><span class="line">npm error path D:\code\hexo\blog\node_modules\nodejieba</span><br><span class="line">npm error command failed</span><br><span class="line">npm error command C:\Windows\system32\cmd.exe /d /s /c node-pre-gyp install --fallback-to-build</span><br><span class="line">npm error D:\code\hexo\blog\node_modules\nodejieba\submodules\cppjieba\include\cppjieba\Trie.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失</span><br></pre></td></tr></table></figure></div>
 
@@ -180,7 +180,7 @@
 <p>这些错误导致<code>nodejieba</code>无法在Windows环境下成功安装和编译，进而导致Hexo生成站点时报错：</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Error: Cannot find module &#x27;nodejieba&#x27;</span><br><span class="line">Require stack:</span><br><span class="line">- D:\code\hexo\blog\themes\redefine\scripts\helpers\recommendation-helpers.js</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><p>经过分析，我决定采用以下策略来解决这个问题：</p>
+<h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><p>经过聪明的Claude 3.7 Sonnet师傅的指点迷津，我决定采用以下策略来解决这个问题：</p>
 <ol>
 <li>找到一个与<code>nodejieba</code>功能相似但对Windows更友好的替代库</li>
 <li>创建一个兼容层，使替代库能够以<code>nodejieba</code>的API形式被使用</li>
@@ -190,13 +190,13 @@
 <p>首先，安装<code>@node-rs/jieba</code>：</p>
 <div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install @node-rs/jieba</span><br></pre></td></tr></table></figure></div>
 
-<p>安装过程顺利，没有出现编译错误。</p>
-<h3 id="步骤2：了解API差异"><a href="#步骤2：了解API差异" class="headerlink" title="步骤2：了解API差异"></a>步骤2：了解API差异</h3><p>接下来，需要了解原始<code>nodejieba</code>和<code>@node-rs/jieba</code>之间的API差异。为此，我创建了一系列测试脚本。</p>
+<p>安装过程很顺利，没有出现编译错误。</p>
+<h3 id="步骤2：了解API差异"><a href="#步骤2：了解API差异" class="headerlink" title="步骤2：了解API差异"></a>步骤2：了解API差异</h3><p>接下来，需要了解原始<code>nodejieba</code>和<code>@node-rs/jieba</code>之间的API差异。为此，我找AI创建了一系列测试脚本。</p>
 <p>首先，检查<code>@node-rs/jieba</code>导出了哪些内容：</p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> jieba = <span class="built_in">require</span>(<span class="string">&#x27;@node-rs/jieba&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Available methods and properties:&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">keys</span>(jieba));</span><br></pre></td></tr></table></figure></div>
 
 <p>输出结果表明<code>@node-rs/jieba</code>导出了两个主要类：<code>Jieba</code>和<code>TfIdf</code>：</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Available methods and properties:</span><br><span class="line">[ &#x27;Jieba&#x27;, &#x27;TfIdf&#x27; ]</span><br></pre></td></tr></table></figure></div>
+<div class="code-container" data-rel="Shell"><figure class="iseeu highlight shell"><table><tr><td class="code"><pre><span class="line">Available methods and properties:</span><br><span class="line">[ &#x27;Jieba&#x27;, &#x27;TfIdf&#x27; ]</span><br></pre></td></tr></table></figure></div>
 
 <p>然后，我尝试使用这些类来进行分词：</p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">Jieba</span>, <span class="title class_">TfIdf</span> &#125; = <span class="built_in">require</span>(<span class="string">&#x27;@node-rs/jieba&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个jieba分词实例</span></span><br><span class="line"><span class="keyword">const</span> jieba = <span class="keyword">new</span> <span class="title class_">Jieba</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试分词</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Cut result:&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jieba.<span class="title function_">cut</span>(<span class="string">&#x27;南京市长江大桥&#x27;</span>, <span class="literal">true</span>));</span><br></pre></td></tr></table></figure></div>
@@ -204,13 +204,13 @@
 <p>输出结果：</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Cut result:</span><br><span class="line">[ &#x27;南京市&#x27;, &#x27;长江大桥&#x27; ]</span><br></pre></td></tr></table></figure></div>
 
-<p>通过测试，我确认了<code>@node-rs/jieba</code>提供的API与原始<code>nodejieba</code>有很大不同：</p>
+<p>通过测试，我确认了<code>@node-rs/jieba</code>提供的API与原始<code>nodejieba</code>有很大不同（所以为什么有这么大不同但名字还要这么相似呢？）：</p>
 <ol>
 <li><code>@node-rs/jieba</code>导出类需要实例化，而不是直接提供函数</li>
 <li>方法名称基本相同，但使用方式不同</li>
 <li><code>TfIdf</code>类有<code>extractKeywords</code>方法，但在我们的测试中无法正常工作</li>
 </ol>
-<h3 id="步骤3：创建兼容层"><a href="#步骤3：创建兼容层" class="headerlink" title="步骤3：创建兼容层"></a>步骤3：创建兼容层</h3><p>基于对两个库API的理解，我创建了一个兼容层<code>nodejieba.js</code>：</p>
+<h3 id="步骤3：创建兼容层"><a href="#步骤3：创建兼容层" class="headerlink" title="步骤3：创建兼容层"></a>步骤3：创建兼容层</h3><p>基于对两个库API的理解，再次发动AI创建了一个兼容层<code>nodejieba.js</code>：</p>
 <div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 兼容层，使@node-rs/jieba能被Hexo主题识别为nodejieba</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">Jieba</span> &#125; = <span class="built_in">require</span>(<span class="string">&#x27;@node-rs/jieba&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实例化对象</span></span><br><span class="line"><span class="keyword">const</span> jiebaInstance = <span class="keyword">new</span> <span class="title class_">Jieba</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出与nodejieba相同的API</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 基本分词函数</span></span><br><span class="line">  <span class="attr">cut</span>: <span class="function">(<span class="params">text, hmm = <span class="literal">true</span></span>) =&gt;</span> jiebaInstance.<span class="title function_">cut</span>(text, hmm),</span><br><span class="line">  <span class="attr">cutAll</span>: <span class="function">(<span class="params">text</span>) =&gt;</span> jiebaInstance.<span class="title function_">cut</span>(text, <span class="literal">true</span>),</span><br><span class="line">  <span class="attr">cutForSearch</span>: <span class="function">(<span class="params">text, hmm = <span class="literal">true</span></span>) =&gt;</span> jiebaInstance.<span class="title function_">cutForSearch</span>(text, hmm),</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 词性标注</span></span><br><span class="line">  <span class="attr">tag</span>: <span class="function">(<span class="params">text</span>) =&gt;</span> jiebaInstance.<span class="title function_">tag</span>(text),</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 关键词抽取 - 简化为返回空数组，避免报错</span></span><br><span class="line">  <span class="attr">extract</span>: <span class="function">(<span class="params">text, topN = <span class="number">5</span></span>) =&gt;</span> [],</span><br><span class="line">  <span class="attr">textRankExtract</span>: <span class="function">(<span class="params">text, topN = <span class="number">5</span></span>) =&gt;</span> [],</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 空实现，避免报错</span></span><br><span class="line">  <span class="attr">load</span>: <span class="function">(<span class="params">options</span>) =&gt;</span> &#123;&#125;,</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 默认词典路径（实际上@node-rs/jieba内置词典）</span></span><br><span class="line">  <span class="attr">DEFAULT_DICT</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="attr">DEFAULT_HMM_DICT</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="attr">DEFAULT_IDF_DICT</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="attr">DEFAULT_STOP_WORD_DICT</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
 
 <p>这个兼容层主要做了以下工作：</p>
@@ -244,7 +244,7 @@
 <p>最后，运行<code>hexo g</code>命令生成博客站点，成功解决了问题：</p>
 <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">(base) PS D:\code\hexo\blog&gt; hexo g</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 143 ms</span><br><span class="line">INFO  Generated: 404.html</span><br><span class="line">...</span><br><span class="line">INFO  21 files generated in 92 ms</span><br></pre></td></tr></table></figure></div>
 
-<h2 id="总结与反思"><a href="#总结与反思" class="headerlink" title="总结与反思"></a>总结与反思</h2><p>本文详细记录了在Windows环境下解决<code>nodejieba</code>安装问题的过程。主要策略是使用基于Rust的<code>@node-rs/jieba</code>替代原始的C++实现，并通过创建兼容层让系统能够继续使用原有的API。</p>
+<h2 id="总结与反思"><a href="#总结与反思" class="headerlink" title="总结与反思"></a>总结与反思</h2><p>主要策略是使用基于Rust的<code>@node-rs/jieba</code>替代原始的C++实现，并通过创建兼容层让系统能够继续使用原有的API。</p>
 <p>这种方法的优点是：</p>
 <ol>
 <li>避开了C++编译环境配置的复杂性</li>
@@ -257,13 +257,12 @@
 <li>词性标注可能与原始实现有细微差别</li>
 <li>需要手动安装和维护本地模块</li>
 </ol>
-<h3 id="后续优化方向"><a href="#后续优化方向" class="headerlink" title="后续优化方向"></a>后续优化方向</h3><p>如果有需要，我们可以进一步完善这个兼容层：</p>
+<h3 id="后续优化方向"><a href="#后续优化方向" class="headerlink" title="后续优化方向"></a>后续优化方向</h3><p>如果有需要，可以进一步（找AI）完善这个兼容层：</p>
 <ol>
 <li>尝试实现关键词提取功能，可能需要自己编写相关算法或找到其他替代库</li>
-<li>将兼容层发布为npm包，方便其他人使用</li>
-<li>创建一个正式的PR到<code>nodejieba</code>仓库，添加Windows环境下的替代安装方案</li>
+<li>将兼容层发布为npm包，方便其他遇到该问题的倒霉蛋使用</li>
+<li>创建一个正式的PR到<code>nodejieba</code>仓库，添加Windows环境下的替代安装方案（会看得上我这AI一顿乱缝但起码还能跑的东西吗）</li>
 </ol>
-<p>这次问题解决的过程也提醒我们，在使用含有原生代码（C++&#x2F;Rust等）的Node.js模块时，需要注意跨平台兼容性问题，特别是在Windows环境下可能需要采取特殊的处理策略。</p>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
 <li>nodejieba官方仓库：<a class="link" href="https://github.com/yanyiwu/nodejieba">https://github.com/yanyiwu/nodejieba<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
 <li>@node-rs&#x2F;jieba仓库：<a class="link" href="https://github.com/napi-rs/jieba">https://github.com/napi-rs/jieba<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
