@@ -7,35 +7,40 @@
 <h3 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h3><p>在这个博客中，你将找到一些技术主题的分享，包括编程技巧、项目经验以及我的个人见解。我希望这些内容能对你有所帮助。</p>
 <h3 id="新访客指南"><a href="#新访客指南" class="headerlink" title="新访客指南"></a>新访客指南</h3><ul>
 <li><strong>浏览博客</strong>：你可以通过菜单栏浏览各类文章，或者使用搜索功能寻找特定主题。</li>
-<li><strong>评论</strong>：如果你对我的文章有任何想法或问题，欢迎在下方留言。这个博客使用 Waline 评论系统，你可以轻松地参与讨论。</li>
+<li><strong>评论</strong>：如果你对我的文章有任何想法或问题，欢迎在下方留言。这个博客使用 Giscus 评论系统，你可以轻松地参与讨论。</li>
 </ul>
-<h3 id="Waline-评论系统使用指南"><a href="#Waline-评论系统使用指南" class="headerlink" title="Waline 评论系统使用指南"></a>Waline 评论系统使用指南</h3><p>Waline 是一个轻量级的评论系统，使用起来非常简单。以下是如何使用 Waline 的步骤：</p>
+<h3 id="Giscus-评论系统使用指南"><a href="#Giscus-评论系统使用指南" class="headerlink" title="Giscus 评论系统使用指南"></a>Giscus 评论系统使用指南</h3><p>Giscus 是基于 GitHub Discussions 的评论系统，它允许访客使用 GitHub 账号进行评论。以下是如何使用 Giscus 的步骤：</p>
 <ol>
+<li><p><strong>登录 GitHub</strong>：</p>
+<ul>
+<li>要发表评论，你需要先登录你的 GitHub 账号。</li>
+<li>点击评论区的”使用 GitHub 登录”按钮进行授权。</li>
+</ul>
+</li>
 <li><p><strong>发表评论</strong>：</p>
 <ul>
-<li>在每篇文章的底部，你会看到评论框。输入你的昵称、电子邮件（可选）和评论内容。</li>
-<li>点击“发送”按钮提交你的评论。</li>
+<li>登录后，你可以在评论框中输入你的评论内容。</li>
+<li>Giscus 支持完整的 Markdown 语法，你可以添加格式、链接、图片等。</li>
+<li>点击”评论”按钮提交你的评论。</li>
 </ul>
 </li>
-<li><p><strong>查看评论</strong>：</p>
+<li><p><strong>查看和回复评论</strong>：</p>
 <ul>
-<li>提交后，你的评论将显示在评论区。你可以随时返回来查看和回复其他人的评论。</li>
+<li>所有评论将显示在文章下方的评论区。</li>
+<li>要回复某个评论，点击该评论下方的”回复”按钮。</li>
 </ul>
 </li>
-<li><p><strong>回复评论</strong>：</p>
+<li><p><strong>互动功能</strong>：</p>
 <ul>
-<li>如果你想回复某个评论，可以点击该评论下方的“回复”按钮，输入你的回复内容后提交。</li>
-</ul>
-</li>
-<li><p><strong>编辑和删除评论</strong>：</p>
-<ul>
-<li>提交后的评论旁边通常会有“编辑”和“删除”选项。点击相应按钮即可进行操作（前提是你有相应权限）。</li>
+<li>你可以对评论点赞、添加表情反应。</li>
+<li>所有评论和互动都会同步到对应的 GitHub Discussions 主题中。</li>
 </ul>
 </li>
 <li><p><strong>注意事项</strong>：</p>
 <ul>
+<li>所有评论都是公开的，且会在 GitHub 上永久保存。</li>
 <li>请遵守社区规范，尊重他人，避免发布不当内容。</li>
-<li>如果遇到任何问题，欢迎随时联系我或查看 Waline 的官方文档。</li>
+<li>如果你想编辑或删除自己的评论，可以直接在 GitHub Discussions 中进行操作。</li>
 </ul>
 </li>
 </ol>
@@ -53,39 +58,29 @@
   <entry>
     <title>大语言模型P1</title>
     <url>/2025/02/07/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8BP1/</url>
-    <content><![CDATA[<h1 id="北京大语言模型实践-Day-1"><a href="#北京大语言模型实践-Day-1" class="headerlink" title="北京大语言模型实践 Day 1"></a>北京大语言模型实践 Day 1</h1><p>​	 来到北京第一天，参加大语言模型的实践。</p>
-<p>​	今天北京真的是格外的冷，零下19度，还有大风呼呼的吹，本来带了两件外套想着轮着穿，结果到最后一起穿在了身上，包的和太空人一样</p>
+    <content><![CDATA[<h2 id="北京大语言模型实践-Day-1"><a href="#北京大语言模型实践-Day-1" class="headerlink" title="北京大语言模型实践 Day 1"></a>北京大语言模型实践 Day 1</h2><p>​	 来到北京第一天，参加大语言模型的实践。</p>
+<p>​	今天北京真的是格外的冷，零下19度，还有大风呼呼地吹，本来带了两件外套想着轮着穿，结果到最后一起穿在了身上，裹的和太空人一样</p>
 <hr>
-<h2 id="课程资源介绍"><a href="#课程资源介绍" class="headerlink" title="课程资源介绍"></a>课程资源介绍</h2><p>我们的课程资源大概有这三个方面：</p>
-<ol>
-<li><p><strong>《Hands-On Large Language Models》</strong></p>
-<p>这书倒是蛮新的，新到国内尚无中文译本（截至我们开课前2025.2.7）</p>
-<p>而且手把手教着搓大语言模型，实践性很强，有配套的Github代码仓库</p>
-<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/rasbt/LLMs-from-scratch</span><br></pre></td></tr></table></figure></div>
+<h3 id="课程资源介绍"><a href="#课程资源介绍" class="headerlink" title="课程资源介绍"></a>课程资源介绍</h3><p>我们的课程资源大概有这三个方面：</p>
+<h4 id="1-《Hands-On-Large-Language-Models》"><a href="#1-《Hands-On-Large-Language-Models》" class="headerlink" title="1. 《Hands-On Large Language Models》"></a>1. <strong>《Hands-On Large Language Models》</strong></h4><p>   这书倒是蛮新的，新到国内尚无中文译本（截至我们开课前2025.2.7）</p>
+<p>   而且手把手教着搓大语言模型，实践性很强，有配套的Github代码仓库</p>
+   <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/rasbt/LLMs-from-scratch</span><br></pre></td></tr></table></figure></div>
 
-
-</li>
-<li><p><strong>《大语言模型》</strong>（赵鑫&#x2F;李军毅&#x2F;周昆&#x2F;唐天一&#x2F;文继荣 著）</p>
-</li>
-</ol>
-<p>   这书感觉就是更加理论化一点，而且因为是国内大佬编写的，所以也不像第一个英文原版一样读起来还有点困难，作为实践之中的理论补充还是非常不错的</p>
-<ol start="3">
-<li><strong>OpenBMB</strong></li>
-</ol>
-<p>   这是个携手清华打造的线上课程，分p很细，可以挑选自己感兴趣的着重学习一下，虽然这个主要是我们在实践前作为前置内容学习的，不过课程还是非常有质量有深度的，回来还是要再好好看一下</p>
+<h4 id="2-《大语言模型》（赵鑫-李军毅-周昆-唐天一-文继荣-著）"><a href="#2-《大语言模型》（赵鑫-李军毅-周昆-唐天一-文继荣-著）" class="headerlink" title="2.  《大语言模型》（赵鑫&#x2F;李军毅&#x2F;周昆&#x2F;唐天一&#x2F;文继荣 著）"></a>2.  <strong>《大语言模型》</strong>（赵鑫&#x2F;李军毅&#x2F;周昆&#x2F;唐天一&#x2F;文继荣 著）</h4><p>   这书感觉就是更加理论化一点，而且因为是国内大佬编写的，所以也不像第一个英文原版一样读起来还有点困难，作为实践之中的理论补充还是非常不错的</p>
+<h4 id="3-OpenBMB"><a href="#3-OpenBMB" class="headerlink" title="3.  OpenBMB"></a>3.  <strong>OpenBMB</strong></h4><p>   这是个携手清华打造的线上课程，分p很细，可以挑选自己感兴趣的着重学习一下，虽然这个主要是我们在实践前作为前置内容学习的，不过课程还是非常有质量有深度的，回来还是要再好好看一下</p>
 <hr>
-<p>ok，那么接下来就要进入课程了</p>
-<p>一开课的惯例：课程介绍，老师介绍，大语言模型趋势，人工智能与机器学习的基本概念介绍</p>
-<p>一大堆介绍完之后，终于来到了大语言模型的简介。这也算是我最感兴趣的内容，从了解到大语言模型之日起（大概是在22年11月份刚刚使用过GPT后不久），我就一直非常好奇这种LLM究竟是怎样理解我们人类的语言的，之前只是模模糊糊知道一点关于“token”的事情，知道那是个大概的大模型拆分语言的单元，今天总算能从头到尾去彻底理解一下了</p>
+<p>ok，那么接下来进入课程</p>
+<p>开课的惯例：课程介绍，老师介绍，大语言模型趋势，人工智能与机器学习的基本概念介绍</p>
+<p>一大堆介绍之后，心心念念的大语言模型闪亮登场。这也算是我最感兴趣的内容，从了解到大语言模型之日起（大概是在22年11月份刚刚使用过GPT后不久），我就一直非常好奇这种LLM究竟是怎样理解我们人类的语言的。之前只是模模糊糊知道一点关于“token”的事情，知道那是个大概的大模型拆分语言的单元，今天算是能从头到尾去彻底了解一下了</p>
 <p>（另外下面小小的感慨一下）</p>
-<p>PPT正文首页就是“60年的算法积累，辛顿位列C位，能在60年前人类的CPU才刚刚买入集成电路的时代的算力条件下有勇气去搞神经网络，“先驱”一词在他身上大概就是最好的体现。 （另外，对于辛顿有一篇文章写的特别好，可以来看看<a class="link" href="https://www.zhihu.com/question/493793998/answer/1901401663572538161">为什么有些人能够那么强大又那么温柔？ - 知乎<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</p>
+<p>PPT正文首页就是“60年的算法积累，辛顿位列C位，能在60年前人类的CPU才刚刚迈入集成电路的时代的算力条件下有勇气去搞神经网络，“先驱”一词在他身上大概就是最好的体现。 （另外，对于辛顿有一篇文章写的特别好，可以来看看  链接：<a class="link" href="https://www.zhihu.com/question/493793998/answer/1901401663572538161">为什么有些人能够那么强大又那么温柔？ - 知乎<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</p>
 <p><img lazyload src="/images/loading.svg" data-src="20250508014658701.png"></p>
 <hr>
 <p>好了言归正传，让我们首先来从大语言模型的历史开始：</p>
-<p>在2017年划时代的Transformer架构发布之前，众多优秀的计算机科学家也在自然语言处理的道路上进行了深远的探索。</p>
+<h3 id="自然语言处理引子"><a href="#自然语言处理引子" class="headerlink" title="自然语言处理引子"></a>自然语言处理引子</h3><p><strong>在2017年划时代的Transformer架构发布之前，众多优秀的计算机科学家也在自然语言处理的道路上进行了深远的探索。</strong></p>
 <p><img lazyload src="/images/loading.svg" data-src="20250508014809451.png"></p>
-<h3 id="1-词袋模型-（Bag-of-Words）"><a href="#1-词袋模型-（Bag-of-Words）" class="headerlink" title="1. 词袋模型 （Bag-of-Words）"></a>1. 词袋模型 （Bag-of-Words）</h3><h4 id="主要前提："><a href="#主要前提：" class="headerlink" title="主要前提："></a>主要前提：</h4><p>​		假设文本的语义主要由其中包含的词汇及其出现次数决定，而词的顺序和语法可以忽略。</p>
-<h4 id="构建过程："><a href="#构建过程：" class="headerlink" title="构建过程："></a>构建过程：</h4><ul>
+<h4 id="1-词袋模型-（Bag-of-Words）"><a href="#1-词袋模型-（Bag-of-Words）" class="headerlink" title="1. 词袋模型 （Bag-of-Words）"></a>1. 词袋模型 （Bag-of-Words）</h4><h5 id="主要前提："><a href="#主要前提：" class="headerlink" title="主要前提："></a>主要前提：</h5><p>​		假设文本的语义主要由其中包含的词汇及其出现次数决定，而词的顺序和语法可以忽略。</p>
+<h5 id="构建过程："><a href="#构建过程：" class="headerlink" title="构建过程："></a>构建过程：</h5><ul>
 <li>首先需要从训练文本中提取所有不同的单词，形成一个词典</li>
 </ul>
 <p>​		再对于每一文本，根据词典中单词的出现次数，将文本转换为一个向量</p>
@@ -97,23 +92,23 @@
 <p>第一句话对应的向量就是1,1,1,0,0，第二句话对应的向量是0,0,1,1,1。</p>
 <p>词袋模型的处理就是这个样子，有点类似于关键词匹配</p>
 <p><img lazyload src="/images/loading.svg" data-src="20250508014907527.png"></p>
-<h4 id="评价："><a href="#评价：" class="headerlink" title="评价："></a>评价：</h4><p>这样子好处当然是有的，<strong>处理算法的简单带来了计算的高效</strong></p>
+<h5 id="评价："><a href="#评价：" class="headerlink" title="评价："></a>评价：</h5><p>这样子好处当然是有的，<strong>处理算法的简单带来了计算的高效</strong></p>
 <p>但是缺点也显而易见：</p>
 <ul>
 <li><strong>丢失语序信息</strong>：词袋模型忽略了词的顺序，这可能导致对文本语义的误解，比如 “我喜欢她”和“她喜欢我”在词袋模型中表示相同，但这实际上就根本不是一回事</li>
-<li><strong>维度灾难</strong>： 显而易见，当文本数据量大时，词典的维度可能会变得非常高，导致向量维度过大，增加计算复杂度。</li>
+<li><strong>维度灾难</strong>：当文本数据量大时，词典的维度可能会变得非常高，导致向量维度过大，增加计算复杂度。</li>
 <li><strong>无法捕捉语义</strong>：无法捕捉词之间的语义关系和上下文信息，不同的词即使语义相似，在词袋模型中也会被表示为不同的维度。</li>
 </ul>
 </li>
 </ul>
-<h3 id="2-Word2Vec-（稠密向量-嵌入向量）"><a href="#2-Word2Vec-（稠密向量-嵌入向量）" class="headerlink" title="2.Word2Vec （稠密向量&#x2F;嵌入向量）"></a>2.Word2Vec （稠密向量&#x2F;嵌入向量）</h3><p>​	这我觉得是一项天才般的技术设计，巧妙地使程序具有了类似人类的语义理解功能，让我们一起来看一下：</p>
+<h4 id="2-Word2Vec-（稠密向量-嵌入向量）"><a href="#2-Word2Vec-（稠密向量-嵌入向量）" class="headerlink" title="2.Word2Vec （稠密向量&#x2F;嵌入向量）"></a>2.Word2Vec （稠密向量&#x2F;嵌入向量）</h4><p>​	这我觉得是一项天才般的技术设计，巧妙地使程序具有了类似人类的语义理解功能，让我们一起来看一下：</p>
 <ul>
-<li><h4 id="主要假设："><a href="#主要假设：" class="headerlink" title="主要假设："></a>主要假设：</h4></li>
+<li><h5 id="主要假设："><a href="#主要假设：" class="headerlink" title="主要假设："></a>主要假设：</h5></li>
 </ul>
 <p>​		分布式语义假说（”You shall know a word by the company it keeps”）</p>
 <p>​		也就是说，它信奉<strong>词的出现上下文决定词的语义</strong>假说，将每个词看成一个点，通过训练，让频繁一起出现的词在向量空间中距离更近，从而捕捉词的语义信息。 </p>
 <ul>
-<li><h4 id="我们举一个二维空间的例子来理解："><a href="#我们举一个二维空间的例子来理解：" class="headerlink" title="我们举一个二维空间的例子来理解："></a>我们举一个二维空间的例子来理解：</h4></li>
+<li><h5 id="我们举一个二维空间的例子来理解："><a href="#我们举一个二维空间的例子来理解：" class="headerlink" title="我们举一个二维空间的例子来理解："></a>我们举一个二维空间的例子来理解：</h5></li>
 <li><p><img lazyload src="/images/loading.svg" data-src="20250508014943467.png"></p>
 <p>如图所示我们可以看到有cats dog apple building adult等单词分布在这个空间中 其中 cats dog puppy都是小宠物一类的，在这个向量空间中就非常接近，聚成了一簇；同时我们观察另外几个类似的簇，都能找到类似的共同点 </p>
 <p>那么，通过查找在向量空间中的距离远近，大语言模型就可以理解其中不同词的相关性，做出一种语义的理解。</p>
@@ -127,13 +122,13 @@
 </li>
 <li><p><img lazyload src="/images/loading.svg" data-src="20250508015051118.png"></p>
 </li>
-<li><h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><ul>
+<li><h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><ul>
 <li><strong>一词多义问题：</strong> 像是charge这样有很多很不想干的释义就难以在向量空间中找到合适的对应位置</li>
 <li><strong>缺少上下文信息</strong>：如像是it这种代词，单论语义很复杂，什么都有可能包含，需要去看上下文信息解读所代指的东西，但如果纯靠向量来解析语义就很困难</li>
 </ul>
 </li>
 </ul>
-<h3 id="3-RNN-Recurrent-Neural-Network）"><a href="#3-RNN-Recurrent-Neural-Network）" class="headerlink" title="3. RNN(Recurrent Neural Network）"></a>3. RNN(Recurrent Neural Network）</h3><p>​	那么为了解决上下文信息的问题，人们又引入了这玩意——循环神经网络</p>
+<h4 id="3-RNN（Recurrent-Neural-Network）"><a href="#3-RNN（Recurrent-Neural-Network）" class="headerlink" title="3. RNN（Recurrent Neural Network）"></a>3. RNN（Recurrent Neural Network）</h4><p>​	那么为了解决上下文信息的问题，人们又引入了这玩意儿——<strong>循环神经网络</strong></p>
 <ul>
 <li><p>RNN 具有<strong>记忆功能</strong>，它会对之前的信息进行记忆，将信息从当前步骤传递到下一步骤，形成一个<strong>循环结构</strong>，使得网络能够记住之前的信息，对于序列数据的处理非常有效。</p>
 </li>
@@ -145,27 +140,145 @@
 </li>
 <li><p><img lazyload src="/images/loading.svg" data-src="20250508015218774.png"></p>
 </li>
-<li><p>(该图展示的为带注意力机制的RNN)</p>
+<li><p>(上图展示的为带注意力机制的RNN)</p>
 </li>
 <li><p>但是我们从他的运行方式就可以看到，它是一种<strong>循环顺序运行</strong>的方式，每次只处理一个附加的token，这种方式<strong>无法并行计算</strong>，就无法使其运行速度得到很大的提高。</p>
 <p>而且这种序列化的处理方式也对训练带来了很多困难。如果训练的序列过长，就会有<strong>梯度消失</strong>或者<strong>梯度爆炸</strong>，难以捕捉长序列中的上下文关系。</p>
 </li>
 </ul>
 <hr>
-<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>​	好了，<strong>Bag-of-Words</strong>带我们迈入了自然语言处理的大门，<strong>Word2Vec</strong>技术又通过巧妙的向量语义空间设置，使自然语言处理在语义理解方面甩开了大步子，<strong>RNN</strong>试图解决上下文的注意力问题，但方向似乎有点不对头，无法并行计算到最后终究只能靠大力出奇迹，但也走得很远啦，在一般的情感分析和机器翻译任务中也取得了不少傲人的成绩。</p>
-<p>​	<strong>但似乎就差那么关键的一步了……</strong></p>
-<p>​	一切都已就位，RNN的无法并行计算特点极大地限制了算力的释放，这成为了卡住大规模自然语言处理的最后一道枷锁。</p>
-<p>​		舞台已经搭建好了，一切都静待着那划时代的架构登场了……</p>
+<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>​	好了，<strong>Bag-of-Words</strong>带我们迈入了自然语言处理的大门，<strong>Word2Vec</strong>技术又通过巧妙的向量语义空间设置，使自然语言处理在语义理解方面甩开了大步子，<strong>RNN</strong>试图解决上下文的注意力问题，但方向似乎有点不对头，无法并行计算到最后终究只能靠大力出奇迹，不过也走得很远啦，在一般的情感分析和机器翻译任务中也取得了不少傲人的成绩。</p>
+<p>​	<strong>一切都已就位，似乎就差那么关键的一步了……</strong></p>
+<p>​	RNN的无法并行计算特点极大地限制了算力的释放，针对长上下文的处理也并没有达到很好的效果，这成为了卡住大规模自然语言处理的最后一道枷锁。</p>
+<p>​		舞台已经搭建好，演员已经全部就位，那划时代的架构即将登场了……</p>
 ]]></content>
       <categories>
         <category>AI</category>
         <category>大语言模型</category>
-        <category>实践</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>AI</tag>
         <tag>大语言模型</tag>
         <tag>实践</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决Windows环境下nodejieba安装问题</title>
+    <url>/2025/05/08/%E8%A7%A3%E5%86%B3Windows%E7%8E%AF%E5%A2%83%E4%B8%8Bnodejieba%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="解决Windows环境下nodejieba安装问题"><a href="#解决Windows环境下nodejieba安装问题" class="headerlink" title="解决Windows环境下nodejieba安装问题"></a>解决Windows环境下nodejieba安装问题</h1><h2 id="问题背景"><a href="#问题背景" class="headerlink" title="问题背景"></a>问题背景</h2><p>在使用Hexo博客系统的过程中，当主题需要使用中文分词功能时，常常会依赖<code>nodejieba</code>这个Node.js模块。<code>nodejieba</code>是”结巴”中文分词的Node.js实现，由底层C++库提供支持，提供高效的中文分词功能。然而，在Windows环境下安装<code>nodejieba</code>时，常常会遇到各种编译错误，特别是在使用较新版本的Node.js时。</p>
+<p>本文将详细记录我在Windows环境下遇到的<code>nodejieba</code>安装问题，以及如何通过创建兼容层来解决这个问题，使Hexo博客能够正常工作。</p>
+<h2 id="错误现象"><a href="#错误现象" class="headerlink" title="错误现象"></a>错误现象</h2><p>在尝试使用<code>npm install nodejieba@latest</code>命令安装最新版本的<code>nodejieba</code>时，出现了以下编译错误：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm error code 1</span><br><span class="line">npm error path D:\code\hexo\blog\node_modules\nodejieba</span><br><span class="line">npm error command failed</span><br><span class="line">npm error command C:\Windows\system32\cmd.exe /d /s /c node-pre-gyp install --fallback-to-build</span><br><span class="line">npm error D:\code\hexo\blog\node_modules\nodejieba\submodules\cppjieba\include\cppjieba\Trie.hpp(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失</span><br></pre></td></tr></table></figure></div>
+
+<p>错误信息非常长，主要是C++代码编译过程中遇到了很多语法错误和编码问题。关键错误包括：</p>
+<ol>
+<li>字符编码问题：文件包含不能在当前代码页(936)中表示的字符</li>
+<li>C++代码语法错误：大量的”未声明的标识符”、”语法错误”等</li>
+<li>预编译二进制下载失败：<code>getaddrinfo ENOTFOUND 7897</code></li>
+</ol>
+<p>这些错误导致<code>nodejieba</code>无法在Windows环境下成功安装和编译，进而导致Hexo生成站点时报错：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Error: Cannot find module &#x27;nodejieba&#x27;</span><br><span class="line">Require stack:</span><br><span class="line">- D:\code\hexo\blog\themes\redefine\scripts\helpers\recommendation-helpers.js</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><p>经过分析，我决定采用以下策略来解决这个问题：</p>
+<ol>
+<li>找到一个与<code>nodejieba</code>功能相似但对Windows更友好的替代库</li>
+<li>创建一个兼容层，使替代库能够以<code>nodejieba</code>的API形式被使用</li>
+<li>将这个兼容层安装为本地模块，使Node.js能够找到它</li>
+</ol>
+<h2 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h2><h3 id="步骤1：寻找替代库"><a href="#步骤1：寻找替代库" class="headerlink" title="步骤1：寻找替代库"></a>步骤1：寻找替代库</h3><p>通过网络搜索，我发现<code>@node-rs/jieba</code>是一个不错的替代选择。这是一个基于Rust实现的中文分词库，编译为WebAssembly，对跨平台有更好的支持，特别是在Windows环境下。</p>
+<p>首先，安装<code>@node-rs/jieba</code>：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">npm install @node-rs/jieba</span><br></pre></td></tr></table></figure></div>
+
+<p>安装过程顺利，没有出现编译错误。</p>
+<h3 id="步骤2：了解API差异"><a href="#步骤2：了解API差异" class="headerlink" title="步骤2：了解API差异"></a>步骤2：了解API差异</h3><p>接下来，需要了解原始<code>nodejieba</code>和<code>@node-rs/jieba</code>之间的API差异。为此，我创建了一系列测试脚本。</p>
+<p>首先，检查<code>@node-rs/jieba</code>导出了哪些内容：</p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> jieba = <span class="built_in">require</span>(<span class="string">&#x27;@node-rs/jieba&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Available methods and properties:&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Object</span>.<span class="title function_">keys</span>(jieba));</span><br></pre></td></tr></table></figure></div>
+
+<p>输出结果表明<code>@node-rs/jieba</code>导出了两个主要类：<code>Jieba</code>和<code>TfIdf</code>：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Available methods and properties:</span><br><span class="line">[ &#x27;Jieba&#x27;, &#x27;TfIdf&#x27; ]</span><br></pre></td></tr></table></figure></div>
+
+<p>然后，我尝试使用这些类来进行分词：</p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">Jieba</span>, <span class="title class_">TfIdf</span> &#125; = <span class="built_in">require</span>(<span class="string">&#x27;@node-rs/jieba&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个jieba分词实例</span></span><br><span class="line"><span class="keyword">const</span> jieba = <span class="keyword">new</span> <span class="title class_">Jieba</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试分词</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Cut result:&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(jieba.<span class="title function_">cut</span>(<span class="string">&#x27;南京市长江大桥&#x27;</span>, <span class="literal">true</span>));</span><br></pre></td></tr></table></figure></div>
+
+<p>输出结果：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Cut result:</span><br><span class="line">[ &#x27;南京市&#x27;, &#x27;长江大桥&#x27; ]</span><br></pre></td></tr></table></figure></div>
+
+<p>通过测试，我确认了<code>@node-rs/jieba</code>提供的API与原始<code>nodejieba</code>有很大不同：</p>
+<ol>
+<li><code>@node-rs/jieba</code>导出类需要实例化，而不是直接提供函数</li>
+<li>方法名称基本相同，但使用方式不同</li>
+<li><code>TfIdf</code>类有<code>extractKeywords</code>方法，但在我们的测试中无法正常工作</li>
+</ol>
+<h3 id="步骤3：创建兼容层"><a href="#步骤3：创建兼容层" class="headerlink" title="步骤3：创建兼容层"></a>步骤3：创建兼容层</h3><p>基于对两个库API的理解，我创建了一个兼容层<code>nodejieba.js</code>：</p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 兼容层，使@node-rs/jieba能被Hexo主题识别为nodejieba</span></span><br><span class="line"><span class="keyword">const</span> &#123; <span class="title class_">Jieba</span> &#125; = <span class="built_in">require</span>(<span class="string">&#x27;@node-rs/jieba&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实例化对象</span></span><br><span class="line"><span class="keyword">const</span> jiebaInstance = <span class="keyword">new</span> <span class="title class_">Jieba</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出与nodejieba相同的API</span></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">  <span class="comment">// 基本分词函数</span></span><br><span class="line">  <span class="attr">cut</span>: <span class="function">(<span class="params">text, hmm = <span class="literal">true</span></span>) =&gt;</span> jiebaInstance.<span class="title function_">cut</span>(text, hmm),</span><br><span class="line">  <span class="attr">cutAll</span>: <span class="function">(<span class="params">text</span>) =&gt;</span> jiebaInstance.<span class="title function_">cut</span>(text, <span class="literal">true</span>),</span><br><span class="line">  <span class="attr">cutForSearch</span>: <span class="function">(<span class="params">text, hmm = <span class="literal">true</span></span>) =&gt;</span> jiebaInstance.<span class="title function_">cutForSearch</span>(text, hmm),</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 词性标注</span></span><br><span class="line">  <span class="attr">tag</span>: <span class="function">(<span class="params">text</span>) =&gt;</span> jiebaInstance.<span class="title function_">tag</span>(text),</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 关键词抽取 - 简化为返回空数组，避免报错</span></span><br><span class="line">  <span class="attr">extract</span>: <span class="function">(<span class="params">text, topN = <span class="number">5</span></span>) =&gt;</span> [],</span><br><span class="line">  <span class="attr">textRankExtract</span>: <span class="function">(<span class="params">text, topN = <span class="number">5</span></span>) =&gt;</span> [],</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 空实现，避免报错</span></span><br><span class="line">  <span class="attr">load</span>: <span class="function">(<span class="params">options</span>) =&gt;</span> &#123;&#125;,</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 默认词典路径（实际上@node-rs/jieba内置词典）</span></span><br><span class="line">  <span class="attr">DEFAULT_DICT</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="attr">DEFAULT_HMM_DICT</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="attr">DEFAULT_IDF_DICT</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  <span class="attr">DEFAULT_STOP_WORD_DICT</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></div>
+
+<p>这个兼容层主要做了以下工作：</p>
+<ol>
+<li>实例化一个<code>Jieba</code>对象</li>
+<li>导出与原始<code>nodejieba</code>相同的函数接口</li>
+<li>将这些函数实现为对<code>Jieba</code>实例方法的调用</li>
+<li>对于无法直接实现的功能，如<code>extract</code>和<code>textRankExtract</code>，简化为返回空数组</li>
+<li>添加原始<code>nodejieba</code>特有的词典路径常量</li>
+</ol>
+<h3 id="步骤4：测试兼容层"><a href="#步骤4：测试兼容层" class="headerlink" title="步骤4：测试兼容层"></a>步骤4：测试兼容层</h3><p>创建<code>test-nodejieba.js</code>来测试我们的兼容层：</p>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 测试我们的nodejieba兼容层</span></span><br><span class="line"><span class="keyword">const</span> nodejieba = <span class="built_in">require</span>(<span class="string">&#x27;./nodejieba&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Cut result:&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> cutResult = nodejieba.<span class="title function_">cut</span>(<span class="string">&#x27;南京市长江大桥&#x27;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Type:&#x27;</span>, <span class="keyword">typeof</span> cutResult, <span class="title class_">Array</span>.<span class="title function_">isArray</span>(cutResult));</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(cutResult);</span><br></pre></td></tr></table></figure></div>
+
+<p>测试结果表明我们的兼容层能够正确分词，并返回预期的结果：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">Cut result:</span><br><span class="line">Type: object true</span><br><span class="line">[ &#x27;南京市&#x27;, &#x27;长江大桥&#x27; ]</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="步骤5：创建本地模块"><a href="#步骤5：创建本地模块" class="headerlink" title="步骤5：创建本地模块"></a>步骤5：创建本地模块</h3><p>虽然我们的兼容层能够正常工作，但Node.js在进行<code>require(&#39;nodejieba&#39;)</code>时仍然找不到这个模块。为了解决这个问题，我们需要将兼容层安装为本地模块。</p>
+<p>首先，在<code>node_modules</code>目录下创建<code>nodejieba</code>文件夹：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p node_modules/nodejieba</span><br></pre></td></tr></table></figure></div>
+
+<p>然后创建<code>package.json</code>文件：</p>
+<div class="code-container" data-rel="Json"><figure class="iseeu highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;nodejieba&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3.4.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Compatible layer for nodejieba using @node-rs/jieba&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;main&quot;</span><span class="punctuation">:</span> <span class="string">&quot;index.js&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;author&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;license&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MIT&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;@node-rs/jieba&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.1&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>将我们的兼容层代码保存为模块的主文件<code>index.js</code>：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cp</span> nodejieba.js node_modules/nodejieba/index.js</span><br></pre></td></tr></table></figure></div>
+
+<p>最后，使用<code>npm link</code>命令使模块在系统中可见：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> node_modules/nodejieba</span><br><span class="line">npm <span class="built_in">link</span></span><br><span class="line"><span class="built_in">cd</span> ../..</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="步骤6：验证解决方案"><a href="#步骤6：验证解决方案" class="headerlink" title="步骤6：验证解决方案"></a>步骤6：验证解决方案</h3><p>再次运行<code>node -e &quot;const nodejieba = require(&#39;nodejieba&#39;); console.log(nodejieba.cut(&#39;南京市长江大桥&#39;));&quot;</code>命令，确认模块可以正常导入和使用。</p>
+<p>最后，运行<code>hexo g</code>命令生成博客站点，成功解决了问题：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">(base) PS D:\code\hexo\blog&gt; hexo g</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 143 ms</span><br><span class="line">INFO  Generated: 404.html</span><br><span class="line">...</span><br><span class="line">INFO  21 files generated in 92 ms</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="总结与反思"><a href="#总结与反思" class="headerlink" title="总结与反思"></a>总结与反思</h2><p>本文详细记录了在Windows环境下解决<code>nodejieba</code>安装问题的过程。主要策略是使用基于Rust的<code>@node-rs/jieba</code>替代原始的C++实现，并通过创建兼容层让系统能够继续使用原有的API。</p>
+<p>这种方法的优点是：</p>
+<ol>
+<li>避开了C++编译环境配置的复杂性</li>
+<li>利用了Rust&#x2F;WebAssembly更好的跨平台性能</li>
+<li>不需要修改依赖<code>nodejieba</code>的原始代码</li>
+</ol>
+<p>同时也有一些限制：</p>
+<ol>
+<li>关键词提取功能（<code>extract</code>和<code>textRankExtract</code>）被简化为返回空数组</li>
+<li>词性标注可能与原始实现有细微差别</li>
+<li>需要手动安装和维护本地模块</li>
+</ol>
+<h3 id="后续优化方向"><a href="#后续优化方向" class="headerlink" title="后续优化方向"></a>后续优化方向</h3><p>如果有需要，我们可以进一步完善这个兼容层：</p>
+<ol>
+<li>尝试实现关键词提取功能，可能需要自己编写相关算法或找到其他替代库</li>
+<li>将兼容层发布为npm包，方便其他人使用</li>
+<li>创建一个正式的PR到<code>nodejieba</code>仓库，添加Windows环境下的替代安装方案</li>
+</ol>
+<p>这次问题解决的过程也提醒我们，在使用含有原生代码（C++&#x2F;Rust等）的Node.js模块时，需要注意跨平台兼容性问题，特别是在Windows环境下可能需要采取特殊的处理策略。</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li>nodejieba官方仓库：<a class="link" href="https://github.com/yanyiwu/nodejieba">https://github.com/yanyiwu/nodejieba<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>@node-rs&#x2F;jieba仓库：<a class="link" href="https://github.com/napi-rs/jieba">https://github.com/napi-rs/jieba<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>Node.js官方文档-Native Modules：<a class="link" href="https://nodejs.org/api/addons.html">https://nodejs.org/api/addons.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Node.js</category>
+      </categories>
+      <tags>
+        <tag>Node.js</tag>
+        <tag>Windows</tag>
+        <tag>中文分词</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
 </search>
