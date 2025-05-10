@@ -1,58 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Welcome to My Blog</title>
-    <url>/2024/10/04/hello-blog/</url>
-    <content><![CDATA[<h2 id="大家好，我是-Gskyer！"><a href="#大家好，我是-Gskyer！" class="headerlink" title="大家好，我是 Gskyer！"></a>大家好，我是 Gskyer！</h2><p>欢迎来到我的个人博客！</p>
-<h3 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h3><p>在这个博客中，你将找到一些技术主题的分享，包括编程技巧、项目经验以及我的个人见解。我希望这些内容能对你有所帮助。</p>
-<h3 id="新访客指南"><a href="#新访客指南" class="headerlink" title="新访客指南"></a>新访客指南</h3><ul>
-<li><strong>浏览博客</strong>：你可以通过菜单栏浏览各类文章，或者使用搜索功能寻找特定主题。</li>
-<li><strong>评论</strong>：如果你对我的文章有任何想法或问题，欢迎在下方留言。这个博客使用 Giscus 评论系统，你可以轻松地参与讨论。</li>
+    <title>Markdown 语法入门解析</title>
+    <url>/2025/05/10/Markdown-%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8%E8%A7%A3%E6%9E%90/</url>
+    <content><![CDATA[<h1 id="Markdown-语法入门解析"><a href="#Markdown-语法入门解析" class="headerlink" title="Markdown 语法入门解析"></a>Markdown 语法入门解析</h1><p>在数字写作的世界里，Markdown 是一种简单而强大的轻量级标记语言。它允许人们使用易读易写的纯文本格式编写文档，像是这种个人博客就需要以markdown的语法来编辑。这篇文章将带你入门 Markdown 的核心语法，让你轻松掌握这种高效的写作语法。</p>
+<h2 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h2><p>标题在 Markdown 中使用 <code>#</code> 号来创建。<code>#</code> 的数量决定了标题的级别，从 <code>#</code>（一级标题）到 <code>######</code>（六级标题）。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题</span></span><br></pre></td></tr></table></figure></div>
+
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><h2 id="二、段落与换行"><a href="#二、段落与换行" class="headerlink" title="二、段落与换行"></a>二、段落与换行</h2><p>一个或多个连续的文本行组成一个段落，段落之间用一个或多个空行分隔。若要强制换行，需在行末尾加两个空格（软换行）或者使用双反斜杠（\）（硬换行）。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">这是一个段落。它由多行文本组成，</span><br><span class="line">但没有空行分隔，所以 Markdown 会将其视为一个单独的段落呈现。</span><br><span class="line"></span><br><span class="line">这是另一个段落。由于与上一段之间有空行分隔，所以会被渲染为独立的段落。</span><br></pre></td></tr></table></figure></div>
+
+<p>这是一个段落。它由多行文本组成，<br>但没有空行分隔，所以 Markdown 会将其视为一个单独的段落呈现。</p>
+<p>这是另一个段落。由于与上一段之间有空行分隔，所以会被渲染为独立的段落。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">这是强制换行的示例，  </span><br><span class="line">行末尾加两个空格可以实现换行。</span><br></pre></td></tr></table></figure></div>
+
+<p>这是强制换行的示例，<br>行末尾加两个空格可以实现换行。</p>
+<h2 id="三、文本样式"><a href="#三、文本样式" class="headerlink" title="三、文本样式"></a>三、文本样式</h2><h3 id="粗体"><a href="#粗体" class="headerlink" title="粗体"></a>粗体</h3><p>使用双星号 <code>**</code> 或双下划线 <code>__</code> 包裹文本，可使文本显示为粗体。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这是粗体文本**</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>这是粗体文本</strong></p>
+<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>使用单星号 <code>*</code> 或单下划线 <code>_</code> 包裹文本，可使文本显示为斜体。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*这是斜体文本*</span></span><br></pre></td></tr></table></figure></div>
+
+<p><em>这是斜体文本</em></p>
+<h2 id="四、列表"><a href="#四、列表" class="headerlink" title="四、列表"></a>四、列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><p>使用星号 <code>*</code>、加号 <code>+</code> 或减号 <code>-</code> 创建无序列表项。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">*</span> 第一项</span><br><span class="line"><span class="bullet">+</span> 第二项</span><br><span class="line"><span class="bullet">-</span> 第三项</span><br></pre></td></tr></table></figure></div>
+
+<ul>
+<li>第一项</li>
 </ul>
-<h3 id="Giscus-评论系统使用指南"><a href="#Giscus-评论系统使用指南" class="headerlink" title="Giscus 评论系统使用指南"></a>Giscus 评论系统使用指南</h3><p>Giscus 是基于 GitHub Discussions 的评论系统，它允许访客使用 GitHub 账号进行评论。以下是如何使用 Giscus 的步骤：</p>
+<ul>
+<li>第二项</li>
+</ul>
+<ul>
+<li>第三项</li>
+</ul>
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><p>使用数字后跟英文点号创建有序列表项。数字的实际值无关紧要，渲染时会自动编号。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 第一项</span><br><span class="line"><span class="bullet">2.</span> 第二项</span><br><span class="line"><span class="bullet">3.</span> 第三项</span><br></pre></td></tr></table></figure></div>
+
 <ol>
-<li><p><strong>登录 GitHub</strong>：</p>
-<ul>
-<li>要发表评论，你需要先登录你的 GitHub 账号。</li>
-<li>点击评论区的”使用 GitHub 登录”按钮进行授权。</li>
-</ul>
-</li>
-<li><p><strong>发表评论</strong>：</p>
-<ul>
-<li>登录后，你可以在评论框中输入你的评论内容。</li>
-<li>Giscus 支持完整的 Markdown 语法，你可以添加格式、链接、图片等。</li>
-<li>点击”评论”按钮提交你的评论。</li>
-</ul>
-</li>
-<li><p><strong>查看和回复评论</strong>：</p>
-<ul>
-<li>所有评论将显示在文章下方的评论区。</li>
-<li>要回复某个评论，点击该评论下方的”回复”按钮。</li>
-</ul>
-</li>
-<li><p><strong>互动功能</strong>：</p>
-<ul>
-<li>你可以对评论点赞、添加表情反应。</li>
-<li>所有评论和互动都会同步到对应的 GitHub Discussions 主题中。</li>
-</ul>
-</li>
-<li><p><strong>注意事项</strong>：</p>
-<ul>
-<li>所有评论都是公开的，且会在 GitHub 上永久保存。</li>
-<li>请遵守社区规范，尊重他人，避免发布不当内容。</li>
-<li>如果你想编辑或删除自己的评论，可以直接在 GitHub Discussions 中进行操作。</li>
-</ul>
-</li>
+<li>第一项</li>
+<li>第二项</li>
+<li>第三项</li>
 </ol>
-<h3 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h3><p>我想特别感谢 Hexo 框架和 Redefine 主题，提供了如此优秀的工具，使我能够轻松创建和管理我的博客。</p>
-<p>感谢你的光临，期待与你们的交流！</p>
+<h2 id="五、链接"><a href="#五、链接" class="headerlink" title="五、链接"></a>五、链接</h2><p>Markdown 支持两种创建链接的方式：行内式和参考式。</p>
+<h3 id="行内式链接"><a href="#行内式链接" class="headerlink" title="行内式链接"></a>行内式链接</h3><p>将链接文本放在方括号 <code>[ ]</code> 中，链接地址放在圆括号 <code>( )</code> 中。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><a class="link" href="https://www.baidu.com/">百度<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<h3 id="参考式链接"><a href="#参考式链接" class="headerlink" title="参考式链接"></a>参考式链接</h3><p>为链接定义一个标签，在方括号 <code>[ ]</code> 中写入链接文本，在方括号后紧跟一个由方括号和尖括号组成的标签引用。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">1</span>]</span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">https://www.baidu.com</span></span><br></pre></td></tr></table></figure></div>
+
+<p>[百度][1]</p>
+<h2 id="六、图片"><a href="#六、图片" class="headerlink" title="六、图片"></a>六、图片</h2><p>图片的语法类似于链接，在链接语法基础上加一个感叹号 <code>!</code>。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">描述文本</span>](<span class="link">https://free4.yunpng.top/2025/05/10/681f5d422db19.png</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><img lazyload src="/images/loading.svg" data-src="https://free4.yunpng.top/2025/05/10/681f5d422db19.png" alt="描述文本"></p>
+<h2 id="七、代码"><a href="#七、代码" class="headerlink" title="七、代码"></a>七、代码</h2><p>在 Markdown 中，可以使用反引号 <code>`</code> 包裹代码片段。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">`var x = 5;`</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>var x = 5;</code></p>
+<p>对于多行代码块，可以使用缩进法（每行缩进 4 个空格或 1 个制表符），或者使用围栏式代码块（使用三个反引号 <code>```</code> 包裹代码块，并可指定编程语言）。</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 缩进法</span><br><span class="line">function test() &#123;</span><br><span class="line">    console.log(&#x27;Hello World&#x27;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<pre><code>// 缩进法
+function test() &#123;
+    console.log(&#39;Hello World&#39;);
+&#125;
+</code></pre>
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 围栏式代码块</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello World&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<div class="code-container" data-rel="Javascript"><figure class="iseeu highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 围栏式代码块</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;Hello World&#x27;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<h2 id="八、引言"><a href="#八、引言" class="headerlink" title="八、引言"></a>八、引言</h2><p>使用大于号 <code>&gt;</code> 来创建引言。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; 这是一个引言。</span></span><br><span class="line"><span class="quote">&gt; 可以包含多行文本。</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>这是一个引言。<br>可以包含多行文本。</p>
+</blockquote>
+<h2 id="九、水平线"><a href="#九、水平线" class="headerlink" title="九、水平线"></a>九、水平线</h2><p>使用三个或更多星号 <code>*</code>、减号 <code>-</code> 或下划线 <code>_</code> 创建水平线。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"><span class="strong">***</span></span></span><br><span class="line"><span class="strong"><span class="section">---</span></span></span><br><span class="line"><span class="strong"><span class="section">__<span class="emphasis">_</span></span></span></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<hr>
+<hr>
+<h2 id="十、表格"><a href="#十、表格" class="headerlink" title="十、表格"></a>十、表格</h2><p>创建表格需要使用竖线 <code>|</code> 分隔表格单元格，使用连字符 <code>-</code> 创建表头分隔栏。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">| 表头 1 | 表头 2 | 表头 3 |</span><br><span class="line">|--------|--------|--------|</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure></div>
+
+<table>
+<thead>
+<tr>
+<th>表头 1</th>
+<th>表头 2</th>
+<th>表头 3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>单元格</td>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+<tr>
+<td>单元格</td>
+<td>单元格</td>
+<td>单元格</td>
+</tr>
+</tbody></table>
+<h2 id="十一、强调（注释）"><a href="#十一、强调（注释）" class="headerlink" title="十一、强调（注释）"></a>十一、强调（注释）</h2><p>Markdown 支持使用双感叹号 <code>!!</code> 等符号来实现强调效果，但这种强调效果可能因渲染引擎的不同而有所差异。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">!!注意!!：这是一个需要特别注意的地方。</span><br></pre></td></tr></table></figure></div>
+
+<p>!!注意!!：这是一个需要特别注意的地方。</p>
+<h2 id="十二、其他语法"><a href="#十二、其他语法" class="headerlink" title="十二、其他语法"></a>十二、其他语法</h2><h3 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h3><p>使用双波浪线 <code>~~</code> 包裹文本，可使文本显示为删除线。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">~~这是一段被删除的文本~~</span><br></pre></td></tr></table></figure></div>
+
+<p><del>这是一段被删除的文本</del></p>
+<h3 id="脚注"><a href="#脚注" class="headerlink" title="脚注"></a>脚注</h3><p>Markdown 支持脚注，使用方括号 <code>[ ]</code> 和 caret 符号 <code>^</code> 创建脚注。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">这是正文文本[^1]。</span><br><span class="line"></span><br><span class="line">[<span class="symbol">^1</span>]: <span class="link">（示例）这是脚注内容。</span></span><br></pre></td></tr></table></figure></div>
+
+<p>这是正文文本<a href="%EF%BC%88%E7%A4%BA%E4%BE%8B%EF%BC%89%E8%BF%99%E6%98%AF%E8%84%9A%E6%B3%A8%E5%86%85%E5%AE%B9%E3%80%82">^1</a>。</p>
+<h3 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h3><p>使用反斜杠 <code>\</code> 可以对特殊字符进行转义。</p>
+<div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">\* 这是一个星号，不是列表符号。</span><br></pre></td></tr></table></figure></div>
+
+<p>* 这是一个星号，不是列表符号。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这就是markdown的入门解析，希望这篇文章能帮助你快速上手 Markdown。</p>
 ]]></content>
       <categories>
-        <category>life</category>
+        <category>技术</category>
+        <category>Markdown</category>
       </categories>
       <tags>
-        <tag>Welcome</tag>
-        <tag>self-introduction</tag>
+        <tag>技术</tag>
+        <tag>语法</tag>
+        <tag>学习</tag>
+        <tag>教程</tag>
+        <tag>Markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -161,6 +242,61 @@
         <tag>AI</tag>
         <tag>大语言模型</tag>
         <tag>实践</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Welcome to My Blog</title>
+    <url>/2024/10/04/hello-blog/</url>
+    <content><![CDATA[<h2 id="大家好，我是-Gskyer！"><a href="#大家好，我是-Gskyer！" class="headerlink" title="大家好，我是 Gskyer！"></a>大家好，我是 Gskyer！</h2><p>欢迎来到我的个人博客！</p>
+<h3 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h3><p>在这个博客中，你将找到一些技术主题的分享，包括编程技巧、项目经验以及我的个人见解。我希望这些内容能对你有所帮助。</p>
+<h3 id="新访客指南"><a href="#新访客指南" class="headerlink" title="新访客指南"></a>新访客指南</h3><ul>
+<li><strong>浏览博客</strong>：你可以通过菜单栏浏览各类文章，或者使用搜索功能寻找特定主题。</li>
+<li><strong>评论</strong>：如果你对我的文章有任何想法或问题，欢迎在下方留言。这个博客使用 Giscus 评论系统，你可以轻松地参与讨论。</li>
+</ul>
+<h3 id="Giscus-评论系统使用指南"><a href="#Giscus-评论系统使用指南" class="headerlink" title="Giscus 评论系统使用指南"></a>Giscus 评论系统使用指南</h3><p>Giscus 是基于 GitHub Discussions 的评论系统，它允许访客使用 GitHub 账号进行评论。以下是如何使用 Giscus 的步骤：</p>
+<ol>
+<li><p><strong>登录 GitHub</strong>：</p>
+<ul>
+<li>要发表评论，你需要先登录你的 GitHub 账号。</li>
+<li>点击评论区的”使用 GitHub 登录”按钮进行授权。</li>
+</ul>
+</li>
+<li><p><strong>发表评论</strong>：</p>
+<ul>
+<li>登录后，你可以在评论框中输入你的评论内容。</li>
+<li>Giscus 支持完整的 Markdown 语法，你可以添加格式、链接、图片等。</li>
+<li>点击”评论”按钮提交你的评论。</li>
+</ul>
+</li>
+<li><p><strong>查看和回复评论</strong>：</p>
+<ul>
+<li>所有评论将显示在文章下方的评论区。</li>
+<li>要回复某个评论，点击该评论下方的”回复”按钮。</li>
+</ul>
+</li>
+<li><p><strong>互动功能</strong>：</p>
+<ul>
+<li>你可以对评论点赞、添加表情反应。</li>
+<li>所有评论和互动都会同步到对应的 GitHub Discussions 主题中。</li>
+</ul>
+</li>
+<li><p><strong>注意事项</strong>：</p>
+<ul>
+<li>所有评论都是公开的，且会在 GitHub 上永久保存。</li>
+<li>请遵守社区规范，尊重他人，避免发布不当内容。</li>
+<li>如果你想编辑或删除自己的评论，可以直接在 GitHub Discussions 中进行操作。</li>
+</ul>
+</li>
+</ol>
+<h3 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h3><p>我想特别感谢 Hexo 框架和 Redefine 主题，提供了如此优秀的工具，使我能够轻松创建和管理我的博客。</p>
+<p>感谢你的光临，期待与你们的交流！</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>Welcome</tag>
+        <tag>self-introduction</tag>
       </tags>
   </entry>
   <entry>
