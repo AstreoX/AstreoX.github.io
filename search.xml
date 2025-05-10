@@ -134,6 +134,7 @@ function test() &#123;
         <tag>学习</tag>
         <tag>教程</tag>
         <tag>Markdown</tag>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -239,9 +240,10 @@ function test() &#123;
         <category>技术</category>
       </categories>
       <tags>
+        <tag>技术</tag>
+        <tag>教程</tag>
         <tag>AI</tag>
         <tag>大语言模型</tag>
-        <tag>实践</tag>
       </tags>
   </entry>
   <entry>
@@ -410,6 +412,7 @@ function test() &#123;
         <category>Node.js</category>
       </categories>
       <tags>
+        <tag>技术</tag>
         <tag>Node.js</tag>
         <tag>Windows</tag>
         <tag>中文分词</tag>
