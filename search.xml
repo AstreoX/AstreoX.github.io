@@ -23,7 +23,7 @@
 <li>你还可以和他人在图书馆中合作开展一个大型的写作项目（开源项目或者团队开发）。你们可以在图书馆专门开辟一个区域（GitHub 仓库）来共同编辑和整理一本书（进行代码协作），每个人都通过自己的写作工具（Git）对书的内容进行修改和补充，并且将这些修改同步到图书馆（GitHub 仓库）中，让其他合作者也能看到最新的内容变化。</li>
 </ul>
 <h2 id="二、Git-的安装与配置"><a href="#二、Git-的安装与配置" class="headerlink" title="二、Git 的安装与配置"></a>二、Git 的安装与配置</h2><h3 id="（一）安装-Git"><a href="#（一）安装-Git" class="headerlink" title="（一）安装 Git"></a>（一）安装 Git</h3><ul>
-<li><strong>Windows 系统</strong> ：访问<a class="link" href="https://git-scm.com/">Git 官网<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，下载适合 Windows 的安装包。运行安装程序，按照安装向导进行操作。在安装过程中，可以选择默认的设置，它会将 Git 添加到系统环境变量中，方便在命令提示符（CMD）或 PowerShell 中使用 Git 命令。</li>
+<li><strong>Windows 系统</strong> ：访问<a class="link"   href="https://git-scm.com/" >Git 官网<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，下载适合 Windows 的安装包。运行安装程序，按照安装向导进行操作。在安装过程中，可以选择默认的设置，它会将 Git 添加到系统环境变量中，方便在命令提示符（CMD）或 PowerShell 中使用 Git 命令。</li>
 <li><strong>macOS 系统</strong> ：可以通过 Homebrew 包管理工具安装。如果尚未安装 Homebrew，可以在终端中运行 <code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code> 进行安装。安装完成后，在终端中输入 <code>brew install git</code> 命令即可安装 Git。</li>
 <li><strong>Linux 系统（以 Ubuntu 为例）</strong> ：打开终端，输入 <code>sudo apt update</code> 命令更新软件包列表。然后输入 <code>sudo apt -y install git</code> 命令来安装 Git。</li>
 </ul>
@@ -105,7 +105,7 @@
 <li><strong>回退到指定提交（保留后续提交作为未暂存的修改）</strong> ：使用 <code>git reset [commit hash]</code> 命令（不加 <code>--hard</code> 参数）回退到指定提交时，会保留该提交之后的更改作为未暂存的修改。这就像是你沿着城堡的楼梯（提交历史）往下走，回到某一层（指定提交），但你把后续楼层（后续提交）的建筑材料（文件修改内容）都搬下来，堆放在这一层（保留为未暂存的修改），你可以根据需要决定是重新利用这些材料，还是丢弃它们。</li>
 </ul>
 <h2 id="八、Git-与-GitHub-协作"><a href="#八、Git-与-GitHub-协作" class="headerlink" title="八、Git 与 GitHub 协作"></a>八、Git 与 GitHub 协作</h2><h3 id="（一）在-GitHub-上创建仓库"><a href="#（一）在-GitHub-上创建仓库" class="headerlink" title="（一）在 GitHub 上创建仓库"></a>（一）在 GitHub 上创建仓库</h3><ol>
-<li>登录 GitHub 官网（<a class="link" href="https://github.com/">https://github.com/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）。</li>
+<li>登录 GitHub 官网（<a class="link"   href="https://github.com/" >https://github.com/<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）。</li>
 <li>点击右上角的 “+” 号，选择 “New repository” 选项。</li>
 <li>在 “Repository name” 中输入仓库名称，可以添加可选的描述信息。</li>
 <li>选择仓库的访问权限（公开或私有）。</li>
@@ -135,6 +135,342 @@
 </li>
 </ul>
 <p>希望这篇详细的 Git 与 GitHub 指南对你有所帮助，让你在代码管理的道路上更加得心应手！</p>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+        <tag>Git</tag>
+        <tag>Github</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Welcome to My Blog</title>
+    <url>/2024/10/04/hello-blog/</url>
+    <content><![CDATA[<h2 id="大家好，我是-Gskyer！"><a href="#大家好，我是-Gskyer！" class="headerlink" title="大家好，我是 Gskyer！"></a>大家好，我是 Gskyer！</h2><p>欢迎来到我的个人博客！</p>
+<h3 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h3><p>在这个博客中，你将找到一些技术主题的分享，包括编程技巧、项目经验以及我的个人见解。我希望这些内容能对你有所帮助。</p>
+<h3 id="新访客指南"><a href="#新访客指南" class="headerlink" title="新访客指南"></a>新访客指南</h3><ul>
+<li><strong>浏览博客</strong>：你可以通过菜单栏浏览各类文章，或者使用搜索功能寻找特定主题。</li>
+<li><strong>评论</strong>：如果你对我的文章有任何想法或问题，欢迎在下方留言。这个博客使用 Giscus 评论系统，你可以轻松地参与讨论。</li>
+</ul>
+<h3 id="Giscus-评论系统使用指南"><a href="#Giscus-评论系统使用指南" class="headerlink" title="Giscus 评论系统使用指南"></a>Giscus 评论系统使用指南</h3><p>Giscus 是基于 GitHub Discussions 的评论系统，它允许访客使用 GitHub 账号进行评论。以下是如何使用 Giscus 的步骤：</p>
+<ol>
+<li><p><strong>登录 GitHub</strong>：</p>
+<ul>
+<li>要发表评论，你需要先登录你的 GitHub 账号。</li>
+<li>点击评论区的”使用 GitHub 登录”按钮进行授权。</li>
+</ul>
+</li>
+<li><p><strong>发表评论</strong>：</p>
+<ul>
+<li>登录后，你可以在评论框中输入你的评论内容。</li>
+<li>Giscus 支持完整的 Markdown 语法，你可以添加格式、链接、图片等。</li>
+<li>点击”评论”按钮提交你的评论。</li>
+</ul>
+</li>
+<li><p><strong>查看和回复评论</strong>：</p>
+<ul>
+<li>所有评论将显示在文章下方的评论区。</li>
+<li>要回复某个评论，点击该评论下方的”回复”按钮。</li>
+</ul>
+</li>
+<li><p><strong>互动功能</strong>：</p>
+<ul>
+<li>你可以对评论点赞、添加表情反应。</li>
+<li>所有评论和互动都会同步到对应的 GitHub Discussions 主题中。</li>
+</ul>
+</li>
+<li><p><strong>注意事项</strong>：</p>
+<ul>
+<li>所有评论都是公开的，且会在 GitHub 上永久保存。</li>
+<li>请遵守社区规范，尊重他人，避免发布不当内容。</li>
+<li>如果你想编辑或删除自己的评论，可以直接在 GitHub Discussions 中进行操作。</li>
+</ul>
+</li>
+</ol>
+<h3 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h3><p>我想特别感谢 Hexo 框架和 Redefine 主题，提供了如此优秀的工具，使我能够轻松创建和管理我的博客。</p>
+<p>感谢你的光临，期待与你们的交流！</p>
+]]></content>
+      <categories>
+        <category>life</category>
+      </categories>
+      <tags>
+        <tag>Welcome</tag>
+        <tag>self-introduction</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git与Github详解：实践篇</title>
+    <url>/2025/05/13/Git%E4%B8%8EGithub%E8%AF%A6%E8%A7%A3%EF%BC%9A%E5%AE%9E%E8%B7%B5%E7%AF%87/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在上一篇文章中，我们详细了解了 Git 的基本概念、工作流和常用命令。在本文中，我们将通过一个实际的项目案例，来逐步演示如何在 GitHub 上进行代码托管和协作。</p>
+<p>本次演示仓库以我和国科大的好哥们共同开发的c语言围棋游戏为演示仓库 <a class="link"   href="https://github.com/AstreoX/CGo" >AstreoX&#x2F;CGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，其中的 <code>ai.c</code> 演示了一个基于蒙特卡洛树搜索（MCTS）的决策示例。本文将引导你从 <strong>安装配置</strong>、<strong>命令行操作</strong> 到 <strong>VS Code 可视化</strong>，一步步学会如何：</p>
+<ol>
+<li>Fork &amp; Clone</li>
+<li>创建分支 &amp; 修改参数</li>
+<li>本地 Commit &amp; Push</li>
+<li>发起 Pull Request</li>
+<li>参与代码审阅与合并</li>
+</ol>
+<hr>
+<h2 id="安装与初始配置"><a href="#安装与初始配置" class="headerlink" title="安装与初始配置"></a>安装与初始配置</h2><h3 id="1-安装-Git"><a href="#1-安装-Git" class="headerlink" title="1. 安装 Git"></a>1. 安装 Git</h3><ul>
+<li><p><strong>Windows</strong>、<strong>macOS</strong>、<strong>Linux</strong> 均可从官网下载安装包：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://git-scm.com/download/</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>上一篇文章已有详细说明，这里不再赘述。</strong></p>
+</li>
+<li><p>安装完成后，在终端（Windows PowerShell &#x2F; macOS Terminal &#x2F; Linux Shell）输入：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></div>
+
+<p>应看到类似 <code>git version 2.x.x</code> 的输出。</p>
+</li>
+</ul>
+<h3 id="2-全局配置"><a href="#2-全局配置" class="headerlink" title="2. 全局配置"></a>2. 全局配置</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>这两个信息会出现在每次提交记录中。</p>
+</blockquote>
+<h3 id="3-注册-GitHub-账号"><a href="#3-注册-GitHub-账号" class="headerlink" title="3. 注册 GitHub 账号"></a>3. 注册 GitHub 账号</h3><ol>
+<li>打开 <a class="link"   href="https://github.com/" >https://github.com<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 并注册。</li>
+<li>完成邮箱验证。</li>
+<li>（强烈建议）在 <strong>Settings → SSH and GPG keys</strong> 添加你的 SSH 公钥，以便后续无需每次输入密码：<ul>
+<li>首先我们在空白处右键，在右键菜单的更多选项中选择“Open Git Bash Here”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="1.png"
+                      alt="打开Git Bash"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="2.png"
+                      alt="Git Bash窗口界面示例"
+                ></li>
+<li>然后输入以下命令（邮箱记得替换成你自己的，注意不要有空格，然后一路无脑回车即可）：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;you@example.com&quot;</span></span><br></pre></td></tr></table></figure></div></li>
+<li>然后将生成的私钥添加到ssh-agent中：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_ed25519</span><br></pre></td></tr></table></figure></div></li>
+<li>接着Git Bash中输入下面命令：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure></div></li>
+<li>然后将显示的公钥内容复制到剪贴板</li>
+<li>然后打开GitHub，在右上角的头像菜单中选择“Settings”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="3.png"
+                      alt="打开Settings"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="4.png"
+                      alt="打开Settings"
+                ></li>
+<li>然后在左侧菜单中选择 “SSH and GPG keys”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="5.png"
+                      alt="选择SSH and GPG keys"
+                ></li>
+<li>然后点击“New SSH key”</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="6.png"
+                      alt="点击New SSH key"
+                ></li>
+<li>Title 随便取一个，将刚刚复制的公钥内容粘贴到 Key 中，然后点击“Add SSH key”</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="7.png"
+                      alt="添加SSH key"
+                ></li>
+<li>然后点击“Add SSH key”</li>
+<li>至此，我们的SSH公钥就添加成功了</li>
+<li>最后，我们可以测试一下是否成功：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div></li>
+<li>然后输入“yes”，如果显示“Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.”，则说明成功了</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Fork-Clone-仓库"><a href="#Fork-Clone-仓库" class="headerlink" title="Fork &amp; Clone 仓库"></a>Fork &amp; Clone 仓库</h2><p>无论命令行还是 VS Code，可视化，第一步都是 <strong>Fork</strong> 一份到自己账号并拉到本地。</p>
+<ol>
+<li><p>访问我的仓库：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/AstreoX/CGo</span><br></pre></td></tr></table></figure></div></li>
+<li><p>点击右上角 <strong>Fork</strong>，将仓库复制到 <code>yourname/CGo</code>。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="8.png"
+                      alt="点击Fork"
+                ></p>
+</li>
+<li><p>再进入到你Fork的仓库，点击 <strong>Code</strong>，复制仓库地址。<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="9.png"
+                      alt="点击Code"
+                ></p>
+</li>
+<li><p>在你本地的电脑上，创建一个合适的文件夹来作为项目目录（建议路径要为全英文），然后老样子右键点击空白处，选择“Open Git Bash Here”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="1.png"
+                      alt="打开Git Bash"
+                ></p>
+</li>
+<li><p>接着输入<code>git clone</code>空格之后，将你刚刚复制的仓库地址粘贴进去，然后回车即可<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="10.png"
+                      alt="输入git clone"
+                ></p>
+</li>
+<li><p>此时，Git就会开始在本地克隆远程仓库的内容到你指定的目录中。</p>
+</li>
+</ol>
+<p>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="11.png"
+                      alt="输入cd CGo"
+                ></p>
+<ol start="7">
+<li>然后，你就可以在本地看到克隆的仓库代码了。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="12.png"
+                      alt="克隆完成"
+                ></li>
+</ol>
+<hr>
+<h2 id="传统命令行工作流"><a href="#传统命令行工作流" class="headerlink" title="传统命令行工作流"></a>传统命令行工作流</h2><h3 id="初始化仓库-添加上游"><a href="#初始化仓库-添加上游" class="headerlink" title="初始化仓库 &amp; 添加上游"></a>初始化仓库 &amp; 添加上游</h3><p>Git Bash窗口不要关掉，接着输入以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> CGo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加上游指向原仓库（便于后续同步主分支）</span></span><br><span class="line">git remote add upstream https://github.com/AstreoX/CGo.git</span><br><span class="line">git remote -v</span><br><span class="line"><span class="comment"># 应看到 origin（你的仓库）和 upstream（原仓库）</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="13.png"
+                      alt="添加上游"
+                ></p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><ol>
+<li>查看当前分支：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure></div></li>
+<li>创建并切换分支：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b tune-mcts</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="14.png"
+                      alt="创建并切换分支"
+                ></p>
+<h3 id="修改-提交"><a href="#修改-提交" class="headerlink" title="修改 &amp; 提交"></a>修改 &amp; 提交</h3><ol>
+<li><p>用你喜欢的编辑器打开 <code>src/ai.c</code>，在程序的第19-23行找到：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="15.png"
+                      alt="修改参数"
+                ><br>根据注释调整MCTS的搜索参数，做出一些修改</p>
+</li>
+<li><p>保存后回到命令行：<br>使用以下命令查看文件状态：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="16.png"
+                      alt="查看文件状态"
+                ><br>会看到src&#x2F;ai.c被标记为修改</p>
+<p>然后使用以下命令将修改添加到暂存区：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line">git add src/ai.c</span><br><span class="line">git diff --staged   <span class="comment"># 查看暂存区对比，能看到你改动了代码的哪些地方</span></span><br><span class="line">git commit -m <span class="string">&quot;在这里记录你修改的参数，例如：Tune MCTS: sim=2000, exploration=1.20&quot;</span></span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="17.png"
+                      alt="提交修改"
+                ></p>
+</li>
+</ol>
+<h3 id="推送-发起-Pull-Request"><a href="#推送-发起-Pull-Request" class="headerlink" title="推送 &amp; 发起 Pull Request"></a>推送 &amp; 发起 Pull Request</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 推送到你远程仓库</span></span><br><span class="line">git push -u origin tune-mcts</span><br></pre></td></tr></table></figure></div>
+<h2 id="之后访问-https-github-com-yourname-CGo-页面会提示-“Compare-pull-request”，说明你已经成功推送了分支，需要发起-Pull-Request。-点击-“Create-pull-request”，填写标题和描述，然后点击-“Create-pull-request”。-然后就会跳转到Pull-Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。-这里显示没有代码冲突，直接点击-“Merge-pull-request”-即可。-然后点击-“Confirm-merge”-即可完成合并。-然后就可以看到你的改动已经被合并到主分支了。"><a href="#之后访问-https-github-com-yourname-CGo-页面会提示-“Compare-pull-request”，说明你已经成功推送了分支，需要发起-Pull-Request。-点击-“Create-pull-request”，填写标题和描述，然后点击-“Create-pull-request”。-然后就会跳转到Pull-Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。-这里显示没有代码冲突，直接点击-“Merge-pull-request”-即可。-然后点击-“Confirm-merge”-即可完成合并。-然后就可以看到你的改动已经被合并到主分支了。" class="headerlink" title="- 之后访问 https://github.com/yourname/CGo- 页面会提示 “Compare &amp; pull request”，说明你已经成功推送了分支，需要发起 Pull Request。  - 点击 “Create pull request”，填写标题和描述，然后点击 “Create pull request”。- 然后就会跳转到Pull Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。- 这里显示没有代码冲突，直接点击 “Merge pull request” 即可。- 然后点击 “Confirm merge” 即可完成合并。- 然后就可以看到你的改动已经被合并到主分支了。
+  "></a><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="18.png"
+                      alt="推送到远程仓库"
+                ><br>- 之后访问 <a class="link"   href="https://github.com/yourname/CGo" >https://github.com/yourname/CGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>- 页面会提示 “Compare &amp; pull request”，说明你已经成功推送了分支，需要发起 Pull Request。<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="19.png"
+                      alt="发起Pull Request"
+                ><br>- 点击 “Create pull request”，填写标题和描述，然后点击 “Create pull request”。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20.png"
+                      alt="填写标题和描述"
+                ><br>- 然后就会跳转到Pull Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。<br>- 这里显示没有代码冲突，直接点击 “Merge pull request” 即可。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="21.png"
+                      alt="Merge pull request"
+                ><br>- 然后点击 “Confirm merge” 即可完成合并。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="22.png"
+                      alt="Confirm merge"
+                ><br>- 然后就可以看到你的改动已经被合并到主分支了。
+  </h2><h2 id="VS-Code-可视化工作流"><a href="#VS-Code-可视化工作流" class="headerlink" title="VS Code 可视化工作流"></a>VS Code 可视化工作流</h2><p>在刚刚克隆到本地的代码仓库，右键选择“Open with Code”，或者直接在VS Code中打开该文件夹，就可以开始可视化操作了。</p>
+<h3 id="安装必备扩展"><a href="#安装必备扩展" class="headerlink" title="安装必备扩展"></a>安装必备扩展</h3><ol>
+<li><strong>GitLens — Git supercharged</strong>：增强代码注释与历史浏览。</li>
+<li><strong>GitHub Pull Requests and Issues</strong>：在 VS Code 中直接浏览&#x2F;发起 PR。</li>
+</ol>
+<h3 id="分支与改动管理"><a href="#分支与改动管理" class="headerlink" title="分支与改动管理"></a>分支与改动管理</h3><ul>
+<li><p><strong>切换&#x2F;创建分支</strong>：</p>
+<ul>
+<li>点击下方加号 → “Create new branch” → 输入 <code>tune-mcts-2</code> → 按回车创建<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="24.png"
+                      alt="创建分支"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="25.png"
+                      alt="创建分支"
+                ><br>这里会出现三个选项，我们只需要关心前两个，分别是单纯的创建分支、创建分支并切换到该分支。</li>
+</ul>
+<p>根据自己的喜好选择即可（一般情况下，我们选择创建分支并切换到该分支）</p>
+</li>
+<li><p><strong>查看改动</strong>：</p>
+<ul>
+<li>在 <strong>源代码管理</strong> 面板能看到所有未暂存与已暂存的文件</li>
+<li>点击文件名可打开 diff 视图</li>
+</ul>
+</li>
+</ul>
+<h3 id="修改-提交-1"><a href="#修改-提交-1" class="headerlink" title="修改 &amp; 提交"></a>修改 &amp; 提交</h3><ol>
+<li><p>在资源管理器中打开 <code>src/ai.c</code>，修改参数并保存。</p>
+</li>
+<li><p>在 <strong>源代码管理</strong> 面板：</p>
+<ul>
+<li><p>将 <code>ai.c</code> 拖动到 “Staged Changes”</p>
+</li>
+<li><p>在上方输入提交信息：</p>
+<blockquote>
+<p>Tune MCTS: sim&#x3D;2000, exploration&#x3D;1.20</p>
+</blockquote>
+</li>
+<li><p>点击 ✓ 提交</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="推送-发起-PR"><a href="#推送-发起-PR" class="headerlink" title="推送 &amp; 发起 PR"></a>推送 &amp; 发起 PR</h3><ul>
+<li><p><strong>推送</strong>：顶部会出现 “Publish Branch” 按钮，点击即可。</p>
+</li>
+<li><p><strong>发起 PR</strong>：</p>
+<ul>
+<li>安装 “GitHub Pull Requests and Issues” 后，点击左侧 “GitHub” 图标</li>
+<li>选择 “Create Pull Request” → 目标库选择 <code>AstreoX/CGo</code> → 填写标题和描述 → 提交</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过以上 <strong>命令行 + VS Code 可视化</strong> 的方式进行版本控制，我们可以更方便地管理代码，并与他人协作。在实际开发中，我们可以根据需要灵活选择适合自己的版本控制方式，以提高开发效率。</p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -194,7 +530,7 @@
 <h3 id="行内式链接"><a href="#行内式链接" class="headerlink" title="行内式链接"></a>行内式链接</h3><p>将链接文本放在方括号 <code>[ ]</code> 中，链接地址放在圆括号 <code>( )</code> 中。</p>
 <div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com</span>)</span><br></pre></td></tr></table></figure></div>
 
-<p><a class="link" href="https://www.baidu.com/">百度<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
+<p><a class="link"   href="https://www.baidu.com/" >百度<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></p>
 <h3 id="参考式链接"><a href="#参考式链接" class="headerlink" title="参考式链接"></a>参考式链接</h3><p>为链接定义一个标签，在方括号 <code>[ ]</code> 中写入链接文本，在方括号后紧跟一个由方括号和尖括号组成的标签引用。</p>
 <div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">[<span class="string">百度</span>][<span class="symbol">1</span>]</span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">https://www.baidu.com</span></span><br></pre></td></tr></table></figure></div>
 
@@ -202,7 +538,12 @@
 <h2 id="六、图片"><a href="#六、图片" class="headerlink" title="六、图片"></a>六、图片</h2><p>图片的语法类似于链接，在链接语法基础上加一个感叹号 <code>!</code>。</p>
 <div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">描述文本</span>](<span class="link">https://free4.yunpng.top/2025/05/10/681f5d422db19.png</span>)</span><br></pre></td></tr></table></figure></div>
 
-<p><img lazyload src="/images/loading.svg" data-src="https://free4.yunpng.top/2025/05/10/681f5d422db19.png" alt="描述文本"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://free4.yunpng.top/2025/05/10/681f5d422db19.png"
+                      alt="描述文本"
+                ></p>
 <h2 id="七、代码"><a href="#七、代码" class="headerlink" title="七、代码"></a>七、代码</h2><p>在 Markdown 中，可以使用反引号 <code>`</code> 包裹代码片段。</p>
 <div class="code-container" data-rel="Markdown"><figure class="iseeu highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="code">`var x = 5;`</span></span><br></pre></td></tr></table></figure></div>
 
@@ -287,41 +628,56 @@ function test() &#123;
   <entry>
     <title>大语言模型P1</title>
     <url>/2025/02/07/%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8BP1/</url>
-    <content><![CDATA[<h2 id="北京大语言模型实践-Day-1"><a href="#北京大语言模型实践-Day-1" class="headerlink" title="北京大语言模型实践 Day 1"></a>北京大语言模型实践 Day 1</h2><p>​	 来到北京第一天，参加大语言模型的实践。</p>
-<p>​	今天北京真的是格外的冷，零下19度，还有大风呼呼地吹，本来带了两件外套想着轮着穿，结果到最后一起穿在了身上，裹的和太空人一样</p>
+    <content><![CDATA[<h2 id="北京大语言模型实践-Day-1"><a href="#北京大语言模型实践-Day-1" class="headerlink" title="北京大语言模型实践 Day 1"></a>北京大语言模型实践 Day 1</h2><p>​ 来到北京第一天，参加大语言模型的实践。</p>
+<p>​ 今天北京真的是格外的冷，零下 19 度，还有大风呼呼地吹，本来带了两件外套想着轮着穿，结果到最后一起穿在了身上，裹的和太空人一样</p>
 <hr>
 <h3 id="课程资源介绍"><a href="#课程资源介绍" class="headerlink" title="课程资源介绍"></a>课程资源介绍</h3><p>我们的课程资源大概有这三个方面：</p>
-<h4 id="1-《Hands-On-Large-Language-Models》"><a href="#1-《Hands-On-Large-Language-Models》" class="headerlink" title="1. 《Hands-On Large Language Models》"></a>1. <strong>《Hands-On Large Language Models》</strong></h4><p>   这书倒是蛮新的，新到国内尚无中文译本（截至我们开课前2025.2.7）</p>
-<p>   而且手把手教着搓大语言模型，实践性很强，有配套的Github代码仓库</p>
-   <div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/rasbt/LLMs-from-scratch</span><br></pre></td></tr></table></figure></div>
+<h4 id="1-《Hands-On-Large-Language-Models》"><a href="#1-《Hands-On-Large-Language-Models》" class="headerlink" title="1. 《Hands-On Large Language Models》"></a>1. <strong>《Hands-On Large Language Models》</strong></h4><p>这书倒是蛮新的，新到国内尚无中文译本（截至我们开课前 2025.2.7）</p>
+<p>而且手把手教着搓大语言模型，实践性很强，有配套的 Github 代码仓库</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/rasbt/LLMs-from-scratch</span><br></pre></td></tr></table></figure></div>
 
-<h4 id="2-《大语言模型》（赵鑫-李军毅-周昆-唐天一-文继荣-著）"><a href="#2-《大语言模型》（赵鑫-李军毅-周昆-唐天一-文继荣-著）" class="headerlink" title="2.  《大语言模型》（赵鑫&#x2F;李军毅&#x2F;周昆&#x2F;唐天一&#x2F;文继荣 著）"></a>2.  <strong>《大语言模型》</strong>（赵鑫&#x2F;李军毅&#x2F;周昆&#x2F;唐天一&#x2F;文继荣 著）</h4><p>   这书感觉就是更加理论化一点，而且因为是国内大佬编写的，所以也不像第一个英文原版一样读起来还有点困难，作为实践之中的理论补充还是非常不错的</p>
-<h4 id="3-OpenBMB"><a href="#3-OpenBMB" class="headerlink" title="3.  OpenBMB"></a>3.  <strong>OpenBMB</strong></h4><p>   这是个携手清华打造的线上课程，分p很细，可以挑选自己感兴趣的着重学习一下，虽然这个主要是我们在实践前作为前置内容学习的，不过课程还是非常有质量有深度的，回来还是要再好好看一下</p>
+<h4 id="2-《大语言模型》（赵鑫-李军毅-周昆-唐天一-文继荣-著）"><a href="#2-《大语言模型》（赵鑫-李军毅-周昆-唐天一-文继荣-著）" class="headerlink" title="2. 《大语言模型》（赵鑫&#x2F;李军毅&#x2F;周昆&#x2F;唐天一&#x2F;文继荣 著）"></a>2. <strong>《大语言模型》</strong>（赵鑫&#x2F;李军毅&#x2F;周昆&#x2F;唐天一&#x2F;文继荣 著）</h4><p>这书感觉就是更加理论化一点，而且因为是国内大佬编写的，所以也不像第一个英文原版一样读起来还有点困难，作为实践之中的理论补充还是非常不错的</p>
+<h4 id="3-OpenBMB"><a href="#3-OpenBMB" class="headerlink" title="3. OpenBMB"></a>3. <strong>OpenBMB</strong></h4><p>这是个携手清华打造的线上课程，分 p 很细，可以挑选自己感兴趣的着重学习一下，虽然这个主要是我们在实践前作为前置内容学习的，不过课程还是非常有质量有深度的，回来还是要再好好看一下</p>
 <hr>
 <p>ok，那么接下来进入课程</p>
 <p>开课的惯例：课程介绍，老师介绍，大语言模型趋势，人工智能与机器学习的基本概念介绍</p>
-<p>一大堆介绍之后，心心念念的大语言模型闪亮登场。这也算是我最感兴趣的内容，从了解到大语言模型之日起（大概是在22年11月份刚刚使用过GPT后不久），我就一直非常好奇这种LLM究竟是怎样理解我们人类的语言的。之前只是模模糊糊知道一点关于“token”的事情，知道那是个大概的大模型拆分语言的单元，今天算是能从头到尾去彻底了解一下了</p>
+<p>一大堆介绍之后，心心念念的大语言模型闪亮登场。这也算是我最感兴趣的内容，从了解到大语言模型之日起（大概是在 22 年 11 月份刚刚使用过 GPT 后不久），我就一直非常好奇这种 LLM 究竟是怎样理解我们人类的语言的。之前只是模模糊糊知道一点关于“token”的事情，知道那是个大概的大模型拆分语言的单元，今天算是能从头到尾去彻底了解一下了</p>
 <p>（另外下面小小的感慨一下）</p>
-<p>PPT正文首页就是“60年的算法积累，辛顿位列C位，能在60年前人类的CPU才刚刚迈入集成电路的时代的算力条件下有勇气去搞神经网络，“先驱”一词在他身上大概就是最好的体现。 （另外，对于辛顿有一篇文章写的特别好，可以来看看  链接：<a class="link" href="https://www.zhihu.com/question/493793998/answer/1901401663572538161">为什么有些人能够那么强大又那么温柔？ - 知乎<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</p>
-<p><img lazyload src="/images/loading.svg" data-src="20250508014658701.png"></p>
+<p>PPT 正文首页就是“60 年的算法积累，辛顿位列 C 位，能在 60 年前人类的 CPU 才刚刚迈入集成电路的时代的算力条件下有勇气去搞神经网络，“先驱”一词在他身上大概就是最好的体现。 （另外，对于辛顿有一篇文章写的特别好，可以来看看 链接：<a class="link"   href="https://www.zhihu.com/question/493793998/answer/1901401663572538161" >为什么有些人能够那么强大又那么温柔？ - 知乎<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>）</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508014658701.png"
+                     
+                ></p>
 <hr>
 <p>好了言归正传，让我们首先来从大语言模型的历史开始：</p>
-<h3 id="自然语言处理引子"><a href="#自然语言处理引子" class="headerlink" title="自然语言处理引子"></a>自然语言处理引子</h3><p><strong>在2017年划时代的Transformer架构发布之前，众多优秀的计算机科学家也在自然语言处理的道路上进行了深远的探索。</strong></p>
-<p><img lazyload src="/images/loading.svg" data-src="20250508014809451.png"></p>
-<h4 id="1-词袋模型-（Bag-of-Words）"><a href="#1-词袋模型-（Bag-of-Words）" class="headerlink" title="1. 词袋模型 （Bag-of-Words）"></a>1. 词袋模型 （Bag-of-Words）</h4><h5 id="主要前提："><a href="#主要前提：" class="headerlink" title="主要前提："></a>主要前提：</h5><p>​		假设文本的语义主要由其中包含的词汇及其出现次数决定，而词的顺序和语法可以忽略。</p>
-<h5 id="构建过程："><a href="#构建过程：" class="headerlink" title="构建过程："></a>构建过程：</h5><ul>
+<h3 id="自然语言处理引子"><a href="#自然语言处理引子" class="headerlink" title="自然语言处理引子"></a>自然语言处理引子</h3><p><strong>在 2017 年划时代的 Transformer 架构发布之前，众多优秀的计算机科学家也在自然语言处理的道路上进行了深远的探索。</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508014809451.png"
+                     
+                ></p>
+<h4 id="1-词袋模型-（Bag-of-Words）"><a href="#1-词袋模型-（Bag-of-Words）" class="headerlink" title="1. 词袋模型 （Bag-of-Words）"></a>1. 词袋模型 （Bag-of-Words）</h4><h5 id="主要前提"><a href="#主要前提" class="headerlink" title="主要前提"></a>主要前提</h5><p>​ 假设文本的语义主要由其中包含的词汇及其出现次数决定，而词的顺序和语法可以忽略。</p>
+<h5 id="构建过程"><a href="#构建过程" class="headerlink" title="构建过程"></a>构建过程</h5><ul>
 <li>首先需要从训练文本中提取所有不同的单词，形成一个词典</li>
 </ul>
-<p>​		再对于每一文本，根据词典中单词的出现次数，将文本转换为一个向量</p>
+<p>​ 再对于每一文本，根据词典中单词的出现次数，将文本转换为一个向量</p>
 <ul>
 <li><p>有点抽象不太好懂？</p>
 <p>举个例子：</p>
 <p>假设有两句话：“我爱自然语言处理”和“自然语言处理很有趣”。</p>
 <p>构建词典时，会将所有不同的词列出：[“我”, “爱”, “自然语言处理”, “很”, “有趣”]。</p>
-<p>第一句话对应的向量就是1,1,1,0,0，第二句话对应的向量是0,0,1,1,1。</p>
+<p>第一句话对应的向量就是 1,1,1,0,0，第二句话对应的向量是 0,0,1,1,1。</p>
 <p>词袋模型的处理就是这个样子，有点类似于关键词匹配</p>
-<p><img lazyload src="/images/loading.svg" data-src="20250508014907527.png"></p>
-<h5 id="评价："><a href="#评价：" class="headerlink" title="评价："></a>评价：</h5><p>这样子好处当然是有的，<strong>处理算法的简单带来了计算的高效</strong></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508014907527.png"
+                     
+                ></p>
+<h5 id="评价"><a href="#评价" class="headerlink" title="评价"></a>评价</h5><p>这样子好处当然是有的，<strong>处理算法的简单带来了计算的高效</strong></p>
 <p>但是缺点也显而易见：</p>
 <ul>
 <li><strong>丢失语序信息</strong>：词袋模型忽略了词的顺序，这可能导致对文本语义的误解，比如 “我喜欢她”和“她喜欢我”在词袋模型中表示相同，但这实际上就根本不是一回事</li>
@@ -330,56 +686,91 @@ function test() &#123;
 </ul>
 </li>
 </ul>
-<h4 id="2-Word2Vec-（稠密向量-嵌入向量）"><a href="#2-Word2Vec-（稠密向量-嵌入向量）" class="headerlink" title="2.Word2Vec （稠密向量&#x2F;嵌入向量）"></a>2.Word2Vec （稠密向量&#x2F;嵌入向量）</h4><p>​	这我觉得是一项天才般的技术设计，巧妙地使程序具有了类似人类的语义理解功能，让我们一起来看一下：</p>
+<h4 id="2-Word2Vec-（稠密向量-嵌入向量）"><a href="#2-Word2Vec-（稠密向量-嵌入向量）" class="headerlink" title="2.Word2Vec （稠密向量&#x2F;嵌入向量）"></a>2.Word2Vec （稠密向量&#x2F;嵌入向量）</h4><p>​ 这我觉得是一项天才般的技术设计，巧妙地使程序具有了类似人类的语义理解功能，让我们一起来看一下：</p>
 <ul>
-<li><h5 id="主要假设："><a href="#主要假设：" class="headerlink" title="主要假设："></a>主要假设：</h5></li>
+<li><h5 id="主要假设"><a href="#主要假设" class="headerlink" title="主要假设"></a>主要假设</h5></li>
 </ul>
-<p>​		分布式语义假说（”You shall know a word by the company it keeps”）</p>
-<p>​		也就是说，它信奉<strong>词的出现上下文决定词的语义</strong>假说，将每个词看成一个点，通过训练，让频繁一起出现的词在向量空间中距离更近，从而捕捉词的语义信息。 </p>
+<p>​ 分布式语义假说（”You shall know a word by the company it keeps”）</p>
+<p>​ 也就是说，它信奉<strong>词的出现上下文决定词的语义</strong>假说，将每个词看成一个点，通过训练，让频繁一起出现的词在向量空间中距离更近，从而捕捉词的语义信息。</p>
 <ul>
-<li><h5 id="我们举一个二维空间的例子来理解："><a href="#我们举一个二维空间的例子来理解：" class="headerlink" title="我们举一个二维空间的例子来理解："></a>我们举一个二维空间的例子来理解：</h5></li>
-<li><p><img lazyload src="/images/loading.svg" data-src="20250508014943467.png"></p>
-<p>如图所示我们可以看到有cats dog apple building adult等单词分布在这个空间中 其中 cats dog puppy都是小宠物一类的，在这个向量空间中就非常接近，聚成了一簇；同时我们观察另外几个类似的簇，都能找到类似的共同点 </p>
+<li><h5 id="我们举一个二维空间的例子来理解"><a href="#我们举一个二维空间的例子来理解" class="headerlink" title="我们举一个二维空间的例子来理解"></a>我们举一个二维空间的例子来理解</h5></li>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508014943467.png"
+                     
+                ></p>
+<p>如图所示我们可以看到有 cats dog apple building adult 等单词分布在这个空间中 其中 cats dog puppy 都是小宠物一类的，在这个向量空间中就非常接近，聚成了一簇；同时我们观察另外几个类似的簇，都能找到类似的共同点</p>
 <p>那么，通过查找在向量空间中的距离远近，大语言模型就可以理解其中不同词的相关性，做出一种语义的理解。</p>
-<p><img lazyload src="/images/loading.svg" data-src="20250508015024925.png"></p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508015024925.png"
+                     
+                ></p>
 </li>
-<li><p>想想看，我们人类的词典也是用一些词去解释另一个词，直到一些基本的词不能再拆分为显式的解释，而是一种模模糊糊的次级概念。对于大模型也是一样word2vec技术也并没有具体的把每个簇都显式地加上一个标签对吧，也是大模型的一种模模糊糊的<strong>次级概念理解</strong>。</p>
+<li><p>想想看，我们人类的词典也是用一些词去解释另一个词，直到一些基本的词不能再拆分为显式的解释，而是一种模模糊糊的次级概念。对于大模型也是一样 word2vec 技术也并没有具体的把每个簇都显式地加上一个标签对吧，也是大模型的一种模模糊糊的<strong>次级概念理解</strong>。</p>
 </li>
-<li><p>那么在自然语言的处理过程中，将语言中的词去映射为低维，稠密的向量的过程，就叫做向量嵌入，也就是常说的embedding过程。</p>
+<li><p>那么在自然语言的处理过程中，将语言中的词去映射为低维，稠密的向量的过程，就叫做向量嵌入，也就是常说的 embedding 过程。</p>
 </li>
-<li><p>而且不仅是单词，实际上，<strong>不同层级的文本都可以做embedding</strong>，token层级，word层级，sentence层级，document层级上都可以做向量嵌入，单词的embedding就是单词的一个向量表示它的语义，句子的embedding就是这句话的语义向量（当然可能这句话的语义很复杂，但确实是可以的），文档的embedding就是这一大段的一个整体的语义。</p>
+<li><p>而且不仅是单词，实际上，<strong>不同层级的文本都可以做 embedding</strong>，token 层级，word 层级，sentence 层级，document 层级上都可以做向量嵌入，单词的 embedding 就是单词的一个向量表示它的语义，句子的 embedding 就是这句话的语义向量（当然可能这句话的语义很复杂，但确实是可以的），文档的 embedding 就是这一大段的一个整体的语义。</p>
 </li>
-<li><p><img lazyload src="/images/loading.svg" data-src="20250508015051118.png"></p>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508015051118.png"
+                     
+                ></p>
 </li>
-<li><h5 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h5><ul>
-<li><strong>一词多义问题：</strong> 像是charge这样有很多很不想干的释义就难以在向量空间中找到合适的对应位置</li>
-<li><strong>缺少上下文信息</strong>：如像是it这种代词，单论语义很复杂，什么都有可能包含，需要去看上下文信息解读所代指的东西，但如果纯靠向量来解析语义就很困难</li>
+<li><h5 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h5><ul>
+<li><strong>一词多义问题：</strong> 像是 charge 这样有很多很不想干的释义就难以在向量空间中找到合适的对应位置</li>
+<li><strong>缺少上下文信息</strong>：如像是 it 这种代词，单论语义很复杂，什么都有可能包含，需要去看上下文信息解读所代指的东西，但如果纯靠向量来解析语义就很困难</li>
 </ul>
 </li>
 </ul>
-<h4 id="3-RNN（Recurrent-Neural-Network）"><a href="#3-RNN（Recurrent-Neural-Network）" class="headerlink" title="3. RNN（Recurrent Neural Network）"></a>3. RNN（Recurrent Neural Network）</h4><p>​	那么为了解决上下文信息的问题，人们又引入了这玩意儿——<strong>循环神经网络</strong></p>
+<h4 id="3-RNN（Recurrent-Neural-Network）"><a href="#3-RNN（Recurrent-Neural-Network）" class="headerlink" title="3. RNN（Recurrent Neural Network）"></a>3. RNN（Recurrent Neural Network）</h4><p>​ 那么为了解决上下文信息的问题，人们又引入了这玩意儿——<strong>循环神经网络</strong></p>
 <ul>
 <li><p>RNN 具有<strong>记忆功能</strong>，它会对之前的信息进行记忆，将信息从当前步骤传递到下一步骤，形成一个<strong>循环结构</strong>，使得网络能够记住之前的信息，对于序列数据的处理非常有效。</p>
 </li>
-<li><p><img lazyload src="/images/loading.svg" data-src="20250508015117355.png"></p>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508015117355.png"
+                     
+                ></p>
 </li>
-<li><p><img lazyload src="/images/loading.svg" data-src="20250508015129267.png"></p>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508015129267.png"
+                     
+                ></p>
 </li>
-<li><p><img lazyload src="/images/loading.svg" data-src="20250508015208156.png"></p>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508015208156.png"
+                     
+                ></p>
 </li>
-<li><p><img lazyload src="/images/loading.svg" data-src="20250508015218774.png"></p>
+<li><p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20250508015218774.png"
+                     
+                ></p>
 </li>
-<li><p>(上图展示的为带注意力机制的RNN)</p>
+<li><p>(上图展示的为带注意力机制的 RNN)</p>
 </li>
-<li><p>但是我们从他的运行方式就可以看到，它是一种<strong>循环顺序运行</strong>的方式，每次只处理一个附加的token，这种方式<strong>无法并行计算</strong>，就无法使其运行速度得到很大的提高。</p>
+<li><p>但是我们从他的运行方式就可以看到，它是一种<strong>循环顺序运行</strong>的方式，每次只处理一个附加的 token，这种方式<strong>无法并行计算</strong>，就无法使其运行速度得到很大的提高。</p>
 <p>而且这种序列化的处理方式也对训练带来了很多困难。如果训练的序列过长，就会有<strong>梯度消失</strong>或者<strong>梯度爆炸</strong>，难以捕捉长序列中的上下文关系。</p>
 </li>
 </ul>
 <hr>
-<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>​	好了，<strong>Bag-of-Words</strong>带我们迈入了自然语言处理的大门，<strong>Word2Vec</strong>技术又通过巧妙的向量语义空间设置，使自然语言处理在语义理解方面甩开了大步子，<strong>RNN</strong>试图解决上下文的注意力问题，但方向似乎有点不对头，无法并行计算到最后终究只能靠大力出奇迹，不过也走得很远啦，在一般的情感分析和机器翻译任务中也取得了不少傲人的成绩。</p>
-<p>​	<strong>一切都已就位，似乎就差那么关键的一步了……</strong></p>
-<p>​	RNN的无法并行计算特点极大地限制了算力的释放，针对长上下文的处理也并没有达到很好的效果，这成为了卡住大规模自然语言处理的最后一道枷锁。</p>
-<p>​		舞台已经搭建好，演员已经全部就位，那划时代的架构即将登场了……</p>
+<h3 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h3><p>​ 好了，<strong>Bag-of-Words</strong>带我们迈入了自然语言处理的大门，<strong>Word2Vec</strong>技术又通过巧妙的向量语义空间设置，使自然语言处理在语义理解方面甩开了大步子，<strong>RNN</strong>试图解决上下文的注意力问题，但方向似乎有点不对头，无法并行计算到最后终究只能靠大力出奇迹，不过也走得很远啦，在一般的情感分析和机器翻译任务中也取得了不少傲人的成绩。</p>
+<p>​ <strong>一切都已就位，似乎就差那么关键的一步了……</strong></p>
+<p>​ RNN 的无法并行计算特点极大地限制了算力的释放，针对长上下文的处理也并没有达到很好的效果，这成为了卡住大规模自然语言处理的最后一道枷锁。</p>
+<p>​ 舞台已经搭建好，演员已经全部就位，那划时代的架构即将登场了……</p>
 ]]></content>
       <categories>
         <category>技术</category>
@@ -391,61 +782,6 @@ function test() &#123;
         <tag>教程</tag>
         <tag>AI</tag>
         <tag>大语言模型</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Welcome to My Blog</title>
-    <url>/2024/10/04/hello-blog/</url>
-    <content><![CDATA[<h2 id="大家好，我是-Gskyer！"><a href="#大家好，我是-Gskyer！" class="headerlink" title="大家好，我是 Gskyer！"></a>大家好，我是 Gskyer！</h2><p>欢迎来到我的个人博客！</p>
-<h3 id="博客内容"><a href="#博客内容" class="headerlink" title="博客内容"></a>博客内容</h3><p>在这个博客中，你将找到一些技术主题的分享，包括编程技巧、项目经验以及我的个人见解。我希望这些内容能对你有所帮助。</p>
-<h3 id="新访客指南"><a href="#新访客指南" class="headerlink" title="新访客指南"></a>新访客指南</h3><ul>
-<li><strong>浏览博客</strong>：你可以通过菜单栏浏览各类文章，或者使用搜索功能寻找特定主题。</li>
-<li><strong>评论</strong>：如果你对我的文章有任何想法或问题，欢迎在下方留言。这个博客使用 Giscus 评论系统，你可以轻松地参与讨论。</li>
-</ul>
-<h3 id="Giscus-评论系统使用指南"><a href="#Giscus-评论系统使用指南" class="headerlink" title="Giscus 评论系统使用指南"></a>Giscus 评论系统使用指南</h3><p>Giscus 是基于 GitHub Discussions 的评论系统，它允许访客使用 GitHub 账号进行评论。以下是如何使用 Giscus 的步骤：</p>
-<ol>
-<li><p><strong>登录 GitHub</strong>：</p>
-<ul>
-<li>要发表评论，你需要先登录你的 GitHub 账号。</li>
-<li>点击评论区的”使用 GitHub 登录”按钮进行授权。</li>
-</ul>
-</li>
-<li><p><strong>发表评论</strong>：</p>
-<ul>
-<li>登录后，你可以在评论框中输入你的评论内容。</li>
-<li>Giscus 支持完整的 Markdown 语法，你可以添加格式、链接、图片等。</li>
-<li>点击”评论”按钮提交你的评论。</li>
-</ul>
-</li>
-<li><p><strong>查看和回复评论</strong>：</p>
-<ul>
-<li>所有评论将显示在文章下方的评论区。</li>
-<li>要回复某个评论，点击该评论下方的”回复”按钮。</li>
-</ul>
-</li>
-<li><p><strong>互动功能</strong>：</p>
-<ul>
-<li>你可以对评论点赞、添加表情反应。</li>
-<li>所有评论和互动都会同步到对应的 GitHub Discussions 主题中。</li>
-</ul>
-</li>
-<li><p><strong>注意事项</strong>：</p>
-<ul>
-<li>所有评论都是公开的，且会在 GitHub 上永久保存。</li>
-<li>请遵守社区规范，尊重他人，避免发布不当内容。</li>
-<li>如果你想编辑或删除自己的评论，可以直接在 GitHub Discussions 中进行操作。</li>
-</ul>
-</li>
-</ol>
-<h3 id="特别感谢"><a href="#特别感谢" class="headerlink" title="特别感谢"></a>特别感谢</h3><p>我想特别感谢 Hexo 框架和 Redefine 主题，提供了如此优秀的工具，使我能够轻松创建和管理我的博客。</p>
-<p>感谢你的光临，期待与你们的交流！</p>
-]]></content>
-      <categories>
-        <category>life</category>
-      </categories>
-      <tags>
-        <tag>Welcome</tag>
-        <tag>self-introduction</tag>
       </tags>
   </entry>
   <entry>
@@ -549,9 +885,9 @@ function test() &#123;
 <li>创建一个正式的PR到<code>nodejieba</code>仓库，添加Windows环境下的替代安装方案（会看得上我这AI一顿乱缝但起码还能跑的东西吗）</li>
 </ol>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
-<li>nodejieba官方仓库：<a class="link" href="https://github.com/yanyiwu/nodejieba">https://github.com/yanyiwu/nodejieba<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li>@node-rs&#x2F;jieba仓库：<a class="link" href="https://github.com/napi-rs/jieba">https://github.com/napi-rs/jieba<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
-<li>Node.js官方文档-Native Modules：<a class="link" href="https://nodejs.org/api/addons.html">https://nodejs.org/api/addons.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>nodejieba官方仓库：<a class="link"   href="https://github.com/yanyiwu/nodejieba" >https://github.com/yanyiwu/nodejieba<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>@node-rs&#x2F;jieba仓库：<a class="link"   href="https://github.com/napi-rs/jieba" >https://github.com/napi-rs/jieba<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
+<li>Node.js官方文档-Native Modules：<a class="link"   href="https://nodejs.org/api/addons.html" >https://nodejs.org/api/addons.html<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a></li>
 </ol>
 ]]></content>
       <categories>

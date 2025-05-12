@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="Gskyer">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="https://AstreoX.github.io/2025/05/13/git与github详解：实践篇/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+    
+    
+        
+        <meta name="description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git与Github详解：实践篇">
+<meta property="og:url" content="https://astreox.github.io/2025/05/13/Git%E4%B8%8EGithub%E8%AF%A6%E8%A7%A3%EF%BC%9A%E5%AE%9E%E8%B7%B5%E7%AF%87/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Hexo Theme Redefine, Redefine Your Hexo Journey.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://astreox.github.io/images/redefine-og.webp">
+<meta property="article:published_time" content="2025-05-12T17:12:28.000Z">
+<meta property="article:modified_time" content="2025-05-12T18:59:55.351Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="技术">
+<meta property="article:tag" content="Git">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://astreox.github.io/images/redefine-og.webp">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="../../../../images/redefine-favicon.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/redefine-favicon.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="../../../../images/redefine-favicon.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            Git与Github详解：实践篇 | Gskyer
+        
+    </title>
+
+    
+<link rel="stylesheet" href="fonts/Chillax/chillax.css">
+
+
+    <!--- Inject Part-->
+    
+
+    
+<link rel="stylesheet" href="../../../../css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="css/build/tailwind.css">
+
+    
+
+    
+<link rel="stylesheet" href="fonts/GeistMono/geist-mono.css">
+
+    
+<link rel="stylesheet" href="fonts/Geist/geist.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+    
+    
+        
+<script src="js/build/libs/anime.min.js"></script>
+
+    
+
+    <script id="hexo-configurations">
+    window.config = {"hostname":"astreox.github.io","root":"/","language":"en","path":"search.xml"};
+    window.theme = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true,"delete_mask":false,"title_alignment":"left","headings_top_spacing":{"h1":"3.2rem","h2":"2.4rem","h3":"1.9rem","h4":"1.6rem","h5":"1.4rem","h6":"1.3rem"}},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","highlight_theme":{"light":"github","dark":"vs2015"},"font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":5,"number":true,"expand":true,"init_open":true},"copyright":{"enable":true,"default":"cc_by_nc_sa"},"lazyload":true,"pangu_js":false,"recommendation":{"enable":true,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/background-light.png?v=20250511","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null,"default_mode":"light"},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null},"title":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://cn.vercount.one/js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"preloader":{"enable":true,"custom_message":"Welcome to My World"},"open_graph":{"enable":true,"image":"/images/redefine-og.webp","description":"Hexo Theme Redefine, Redefine Your Hexo Journey."},"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/background-light.png?v=20250511","dark":"/images/background-dark.png?v=20250511"},"title":"404 Gskyer Not Found","subtitle":{"text":["The Special Space of Gskyer"],"hitokoto":{"enable":false},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"style":"default","links":{"github":"https://github.com/AstreoX","instagram":null,"zhihu":"https://www.zhihu.com/people/gskyer-55","twitter":null,"email":"Gskyer@outlook.it"},"qrs":{"weixin":"/images/qrcode/weixin.jpg"}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":false,"type":"fixed","audios":[{"name":null,"artist":null,"url":null,"cover":null,"lrc":null}]},"mermaid":{"enable":false,"version":"11.4.1"}},"version":"2.8.2","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"width":{"home":"1200px","pages":"1000px"},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"},"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"},"Bookmarks":{"path":"/bookmarks/","icon":"fa-regular fa-bookmark"},"About":{"path":"/about","icon":"fa-regular fa-user"},"Links":{"path":"/links/","icon":"fa-regular fa-link"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"cloud"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":"与BUG斗智斗勇中...","show_on_mobile":true,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"},"Tags":{"path":"/tags","icon":"fa-regular fa-tags"},"Categories":{"path":"/categories","icon":"fa-regular fa-folder"}}},"article_date_format":"auto","excerpt_length":200,"categories":{"enable":true,"limit":5},"tags":{"enable":true,"limit":5}},"footerStart":"2024/10/05 09:30:00"};
+    window.lang_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    window.data = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+
+<body>
+	<div class="progress-bar-container">
+	
+
+	
+	<span class="pjax-progress-bar"></span>
+	<!--        <span class="swup-progress-icon">-->
+	<!--            <i class="fa-solid fa-circle-notch fa-spin"></i>-->
+	<!--        </span>-->
+	
+</div>
+
+<style>
+    :root {
+        --preloader-background-color: #fff;
+        --preloader-text-color: #000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --preloader-background-color: #202124;
+            --preloader-text-color: #fff;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        :root {
+            --preloader-background-color: #fff;
+            --preloader-text-color: #000;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .ml13 {
+            font-size: 2.6rem !important; /* Adjust this value as needed */
+        }
+    }
+
+    .preloader {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem; /* Tailwind 'gap-4' is 1rem */
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        padding: 12px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh; /* 'h-screen' is 100% of the viewport height */
+        background-color: var(--preloader-background-color);
+        z-index: 1100; /* 'z-[1100]' sets the z-index */
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .ml13 {
+        font-size: 3.2rem;
+        /* text-transform: uppercase; */
+        color: var(--preloader-text-color);
+        letter-spacing: -1px;
+        font-weight: 500;
+        font-family: 'Chillax-Variable', sans-serif;
+        text-align: center;
+    }
+
+    .ml13 .word {
+        display: inline-flex;
+        flex-wrap: wrap;
+        white-space: nowrap;
+    }
+
+    .ml13 .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
+</style>
+
+<div class="preloader">
+    <h2 class="ml13">
+        Welcome to My World
+    </h2>
+    <script>
+        var textWrapper = document.querySelector('.ml13');
+        // Split text into words
+        var words = textWrapper.textContent.trim().split(' ');
+
+        // Clear the existing content
+        textWrapper.innerHTML = '';
+
+        // Wrap each word and its letters in spans
+        words.forEach(function(word) {
+            var wordSpan = document.createElement('span');
+            wordSpan.classList.add('word');
+            wordSpan.innerHTML = word.replace(/\S/g, "<span class='letter'>$&</span>");
+            textWrapper.appendChild(wordSpan);
+            textWrapper.appendChild(document.createTextNode(' ')); // Add space between words
+        });
+
+        var animation = anime.timeline({ loop: true })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [20, 0],
+                translateZ: 0,
+                opacity: [0, 1],
+                filter: ['blur(5px)', 'blur(0px)'],
+                easing: "easeOutExpo",
+                duration: 1200,
+                delay: (el, i) => 300 + 20 * i,
+            })
+            .add({
+                targets: '.ml13 .letter',
+                translateY: [0, -20],
+                opacity: [1, 0],
+                filter: ['blur(0px)', 'blur(5px)'],
+                easing: "easeInExpo",
+                duration: 1000,
+                delay: (el, i) => 15 * i,
+                complete: function() {
+                    hidePreloader();
+                }
+            }, '-=700');
+
+
+        let themeStatus = JSON.parse(localStorage.getItem('REDEFINE-THEME-STATUS'))?.isDark;
+
+        // If the theme status is not found in local storage, check the preferred color scheme
+        if (themeStatus === undefined || themeStatus === null) {
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                themeStatus = 'dark';
+            } else {
+                themeStatus = 'light';
+            }
+        }
+
+        // Now you can use the themeStatus variable in your code
+        if (themeStatus) {
+            document.documentElement.style.setProperty('--preloader-background-color', '#202124');
+            document.documentElement.style.setProperty('--preloader-text-color', '#fff');
+        } else {
+            document.documentElement.style.setProperty('--preloader-background-color', '#fff');
+            document.documentElement.style.setProperty('--preloader-text-color', '#000');
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(hidePreloader, 5000); // Call hidePreloader after 5000 milliseconds if not already called by animation
+        });
+
+        function hidePreloader() {
+            var preloader = document.querySelector('.preloader');
+            preloader.style.opacity = '0';
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 200);
+        }
+    </script>
+</div>
+
+<main class="page-container" id="swup">
+
+	
+
+	<div class="main-content-container flex flex-col justify-between min-h-dvh">
+		<div class="main-content-header">
+			<header class="navbar-container px-6 md:px-12">
+    <div class="navbar-content transition-navbar ">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                
+                Gskyer
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="../../../../index.html"
+                                        >
+                                    <i class="fa-regular fa-house fa-fw"></i>
+                                    HOME
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="../../../../archives"
+                                        >
+                                    <i class="fa-regular fa-archive fa-fw"></i>
+                                    ARCHIVES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="../../../../categories"
+                                        >
+                                    <i class="fa-regular fa-folder fa-fw"></i>
+                                    CATEGORIES
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="../../../../bookmarks/"
+                                        >
+                                    <i class="fa-regular fa-bookmark fa-fw"></i>
+                                    BOOKMARKS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="../../../../about"
+                                        >
+                                    <i class="fa-regular fa-user fa-fw"></i>
+                                    ABOUT
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            
+
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class=""
+                                   href="../../../../links/"
+                                        >
+                                    <i class="fa-regular fa-link fa-fw"></i>
+                                    LINKS
+                                    
+                                </a>
+
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile sheet -->
+    <div class="navbar-drawer h-dvh w-full absolute top-0 left-0 bg-background-color flex flex-col justify-between">
+        <ul class="drawer-navbar-list flex flex-col px-4 justify-center items-start">
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="../../../../index.html"
+                        >
+                            <span>
+                                HOME
+                            </span>
+                            
+                                <i class="fa-regular fa-house fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="../../../../archives"
+                        >
+                            <span>
+                                ARCHIVES
+                            </span>
+                            
+                                <i class="fa-regular fa-archive fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="../../../../categories"
+                        >
+                            <span>
+                                CATEGORIES
+                            </span>
+                            
+                                <i class="fa-regular fa-folder fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="../../../../bookmarks/"
+                        >
+                            <span>
+                                BOOKMARKS
+                            </span>
+                            
+                                <i class="fa-regular fa-bookmark fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="../../../../about"
+                        >
+                            <span>
+                                ABOUT
+                            </span>
+                            
+                                <i class="fa-regular fa-user fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+                
+                    
+
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full "
+                           href="../../../../links/"
+                        >
+                            <span>
+                                LINKS
+                            </span>
+                            
+                                <i class="fa-regular fa-link fa-sm fa-fw"></i>
+                            
+                        </a>
+                        
+
+                        
+                    </li>
+            
+
+            
+            
+                
+                    
+                    
+                    <li class="drawer-navbar-item text-base my-1.5 flex flex-col w-full">
+                        <a class="py-1.5 px-2 flex flex-row items-center justify-between gap-1 hover:!text-primary active:!text-primary text-2xl font-semibold group border-b border-border-color hover:border-primary w-full active"
+                           href="../../../../tags"
+                        >
+                            <span>Tags</span>
+                            <i class="fa-regular fa-tags fa-sm fa-fw"></i>
+                        </a>
+                    </li>
+                
+                    
+            
+        </ul>
+
+        <div class="statistics flex justify-around my-2.5">
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="../../../../public/tags">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">16</div>
+        <div class="label text-third-text-color text-sm">Tags</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="../../../../public/categories">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">7</div>
+        <div class="label text-third-text-color text-sm">Categories</div>
+    </a>
+    <a class="item tag-count-item flex flex-col justify-center items-center w-20" href="../../../../archives">
+        <div class="number text-2xl sm:text-xl text-second-text-color font-semibold">6</div>
+        <div class="label text-third-text-color text-sm">Posts</div>
+    </a>
+</div>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+		</div>
+
+		<div class="main-content-body transition-fade-up">
+			
+
+			<div class="main-content">
+				<div class="post-page-container flex relative justify-between box-border w-full h-full">
+	<div class="article-content-container">
+
+		<div class="article-title relative w-full">
+			
+			
+			
+			<img src="https://th.bing.com/th/id/OIP.ijtKMya2lVcYvmNETyDx_gHaEK?cb=iwp2&amp;pid=ImgDet&amp;w=474&amp;h=266&amp;rs=1" alt="Git与Github详解：实践篇" class="w-full h-60 sm:h-72 md:h-80 object-cover sm:rounded-t-large dark:brightness-75" />
+			
+			<div class="w-full flex items-center absolute bottom-0 justify-start">
+				<h1 class="article-title-cover text-center mx-6 my-6 text-second-text-color bg-background-color-transparent px-4 py-3 text-3xl sm:text-4xl md:text-5xl font-semibold backdrop-blur-lg rounded-xl border border-border-color ">Git与Github详解：实践篇</h1>
+			</div>
+			
+		</div>
+
+		
+		<div class="article-header flex flex-row gap-2 items-center px-2 sm:px-6 md:px-8">
+			<div class="avatar w-[46px] h-[46px] flex-shrink-0 rounded-medium border border-border-color p-[1px]">
+				<img src="../../../../images/Gskyer.jpg">
+			</div>
+			<div class="info flex flex-col justify-between">
+				<div class="author flex items-center">
+					<span class="name text-default-text-color text-lg font-semibold">Gskyer</span>
+					
+					<span class="author-label ml-1.5 text-xs px-2 py-0.5 rounded-small text-third-text-color border border-shadow-color-1">Lv1</span>
+					
+				</div>
+				<div class="meta-info">
+					<div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2025-05-13 01:12:28</span>
+        <span class="mobile">2025-05-13 01:12:28</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2025-05-13 02:59:55</span>
+            <span class="mobile">2025-05-13 02:59:55</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                
+                    
+                        
+                        <li>
+                            <a href="../../../../public/categories/%E6%8A%80%E6%9C%AF/">技术</a>&nbsp;
+                        </li>
+                    
+                    
+                
+                    
+                        
+                            <li>></li>
+                        
+                        <li>
+                            <a href="../../../../public/categories/%E6%8A%80%E6%9C%AF/Git/">Git</a>&nbsp;
+                        </li>
+                    
+                    
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="../../../../public/tags/%E6%8A%80%E6%9C%AF/">技术</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="../../../../public/tags/Git/">Git</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="../../../../public/tags/Github/">Github</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="../../../../public/tags/%E6%95%99%E7%A8%8B/">教程</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.7k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>6 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+				</div>
+			</div>
+		</div>
+		
+
+		
+
+
+		<div class="article-content markdown-body px-2 sm:px-6 md:px-8 pb-8">
+			<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在上一篇文章中，我们详细了解了 Git 的基本概念、工作流和常用命令。在本文中，我们将通过一个实际的项目案例，来逐步演示如何在 GitHub 上进行代码托管和协作。</p>
+<p>本次演示仓库以我和国科大的好哥们共同开发的c语言围棋游戏为演示仓库 <a class="link"   target="_blank" rel="noopener" href="https://github.com/AstreoX/CGo" >AstreoX&#x2F;CGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a>，其中的 <code>ai.c</code> 演示了一个基于蒙特卡洛树搜索（MCTS）的决策示例。本文将引导你从 <strong>安装配置</strong>、<strong>命令行操作</strong> 到 <strong>VS Code 可视化</strong>，一步步学会如何：</p>
+<ol>
+<li>Fork &amp; Clone</li>
+<li>创建分支 &amp; 修改参数</li>
+<li>本地 Commit &amp; Push</li>
+<li>发起 Pull Request</li>
+<li>参与代码审阅与合并</li>
+</ol>
+<hr>
+<h2 id="安装与初始配置"><a href="#安装与初始配置" class="headerlink" title="安装与初始配置"></a>安装与初始配置</h2><h3 id="1-安装-Git"><a href="#1-安装-Git" class="headerlink" title="1. 安装 Git"></a>1. 安装 Git</h3><ul>
+<li><p><strong>Windows</strong>、<strong>macOS</strong>、<strong>Linux</strong> 均可从官网下载安装包：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://git-scm.com/download/</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>上一篇文章已有详细说明，这里不再赘述。</strong></p>
+</li>
+<li><p>安装完成后，在终端（Windows PowerShell &#x2F; macOS Terminal &#x2F; Linux Shell）输入：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure></div>
+
+<p>应看到类似 <code>git version 2.x.x</code> 的输出。</p>
+</li>
+</ul>
+<h3 id="2-全局配置"><a href="#2-全局配置" class="headerlink" title="2. 全局配置"></a>2. 全局配置</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;you@example.com&quot;</span></span><br></pre></td></tr></table></figure></div>
+
+<blockquote>
+<p>这两个信息会出现在每次提交记录中。</p>
+</blockquote>
+<h3 id="3-注册-GitHub-账号"><a href="#3-注册-GitHub-账号" class="headerlink" title="3. 注册 GitHub 账号"></a>3. 注册 GitHub 账号</h3><ol>
+<li>打开 <a class="link"   target="_blank" rel="noopener" href="https://github.com/" >https://github.com<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a> 并注册。</li>
+<li>完成邮箱验证。</li>
+<li>（强烈建议）在 <strong>Settings → SSH and GPG keys</strong> 添加你的 SSH 公钥，以便后续无需每次输入密码：<ul>
+<li>首先我们在空白处右键，在右键菜单的更多选项中选择“Open Git Bash Here”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="1.png"
+                      alt="打开Git Bash"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="2.png"
+                      alt="Git Bash窗口界面示例"
+                ></li>
+<li>然后输入以下命令（邮箱记得替换成你自己的，注意不要有空格，然后一路无脑回车即可）：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C <span class="string">&quot;you@example.com&quot;</span></span><br></pre></td></tr></table></figure></div></li>
+<li>然后将生成的私钥添加到ssh-agent中：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">eval</span> <span class="string">&quot;<span class="subst">$(ssh-agent -s)</span>&quot;</span></span><br><span class="line">ssh-add ~/.ssh/id_ed25519</span><br></pre></td></tr></table></figure></div></li>
+<li>接着Git Bash中输入下面命令：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_ed25519.pub</span><br></pre></td></tr></table></figure></div></li>
+<li>然后将显示的公钥内容复制到剪贴板</li>
+<li>然后打开GitHub，在右上角的头像菜单中选择“Settings”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="3.png"
+                      alt="打开Settings"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="4.png"
+                      alt="打开Settings"
+                ></li>
+<li>然后在左侧菜单中选择 “SSH and GPG keys”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="5.png"
+                      alt="选择SSH and GPG keys"
+                ></li>
+<li>然后点击“New SSH key”</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="6.png"
+                      alt="点击New SSH key"
+                ></li>
+<li>Title 随便取一个，将刚刚复制的公钥内容粘贴到 Key 中，然后点击“Add SSH key”</li>
+<li><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="7.png"
+                      alt="添加SSH key"
+                ></li>
+<li>然后点击“Add SSH key”</li>
+<li>至此，我们的SSH公钥就添加成功了</li>
+<li>最后，我们可以测试一下是否成功：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></div></li>
+<li>然后输入“yes”，如果显示“Hi username! You’ve successfully authenticated, but GitHub does not provide shell access.”，则说明成功了</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Fork-Clone-仓库"><a href="#Fork-Clone-仓库" class="headerlink" title="Fork &amp; Clone 仓库"></a>Fork &amp; Clone 仓库</h2><p>无论命令行还是 VS Code，可视化，第一步都是 <strong>Fork</strong> 一份到自己账号并拉到本地。</p>
+<ol>
+<li><p>访问我的仓库：</p>
+<div class="code-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://github.com/AstreoX/CGo</span><br></pre></td></tr></table></figure></div></li>
+<li><p>点击右上角 <strong>Fork</strong>，将仓库复制到 <code>yourname/CGo</code>。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="8.png"
+                      alt="点击Fork"
+                ></p>
+</li>
+<li><p>再进入到你Fork的仓库，点击 <strong>Code</strong>，复制仓库地址。<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="9.png"
+                      alt="点击Code"
+                ></p>
+</li>
+<li><p>在你本地的电脑上，创建一个合适的文件夹来作为项目目录（建议路径要为全英文），然后老样子右键点击空白处，选择“Open Git Bash Here”<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="1.png"
+                      alt="打开Git Bash"
+                ></p>
+</li>
+<li><p>接着输入<code>git clone</code>空格之后，将你刚刚复制的仓库地址粘贴进去，然后回车即可<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="10.png"
+                      alt="输入git clone"
+                ></p>
+</li>
+<li><p>此时，Git就会开始在本地克隆远程仓库的内容到你指定的目录中。</p>
+</li>
+</ol>
+<p>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="11.png"
+                      alt="输入cd CGo"
+                ></p>
+<ol start="7">
+<li>然后，你就可以在本地看到克隆的仓库代码了。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="12.png"
+                      alt="克隆完成"
+                ></li>
+</ol>
+<hr>
+<h2 id="传统命令行工作流"><a href="#传统命令行工作流" class="headerlink" title="传统命令行工作流"></a>传统命令行工作流</h2><h3 id="初始化仓库-添加上游"><a href="#初始化仓库-添加上游" class="headerlink" title="初始化仓库 &amp; 添加上游"></a>初始化仓库 &amp; 添加上游</h3><p>Git Bash窗口不要关掉，接着输入以下命令：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> CGo</span><br><span class="line"></span><br><span class="line"><span class="comment"># 添加上游指向原仓库（便于后续同步主分支）</span></span><br><span class="line">git remote add upstream https://github.com/AstreoX/CGo.git</span><br><span class="line">git remote -v</span><br><span class="line"><span class="comment"># 应看到 origin（你的仓库）和 upstream（原仓库）</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="13.png"
+                      alt="添加上游"
+                ></p>
+<h3 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h3><ol>
+<li>查看当前分支：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure></div></li>
+<li>创建并切换分支：<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b tune-mcts</span><br></pre></td></tr></table></figure></div></li>
+</ol>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="14.png"
+                      alt="创建并切换分支"
+                ></p>
+<h3 id="修改-提交"><a href="#修改-提交" class="headerlink" title="修改 &amp; 提交"></a>修改 &amp; 提交</h3><ol>
+<li><p>用你喜欢的编辑器打开 <code>src/ai.c</code>，在程序的第19-23行找到：<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="15.png"
+                      alt="修改参数"
+                ><br>根据注释调整MCTS的搜索参数，做出一些修改</p>
+</li>
+<li><p>保存后回到命令行：<br>使用以下命令查看文件状态：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="16.png"
+                      alt="查看文件状态"
+                ><br>会看到src&#x2F;ai.c被标记为修改</p>
+<p>然后使用以下命令将修改添加到暂存区：</p>
+<div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add src/ai.c</span><br><span class="line">git diff --staged   <span class="comment"># 查看暂存区对比，能看到你改动了代码的哪些地方</span></span><br><span class="line">git commit -m <span class="string">&quot;在这里记录你修改的参数，例如：Tune MCTS: sim=2000, exploration=1.20&quot;</span></span><br></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="17.png"
+                      alt="提交修改"
+                ></p>
+</li>
+</ol>
+<h3 id="推送-发起-Pull-Request"><a href="#推送-发起-Pull-Request" class="headerlink" title="推送 &amp; 发起 Pull Request"></a>推送 &amp; 发起 Pull Request</h3><div class="code-container" data-rel="Bash"><figure class="iseeu highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 推送到你远程仓库</span></span><br><span class="line">git push -u origin tune-mcts</span><br></pre></td></tr></table></figure></div>
+<h2 id="之后访问-https-github-com-yourname-CGo-页面会提示-“Compare-pull-request”，说明你已经成功推送了分支，需要发起-Pull-Request。-点击-“Create-pull-request”，填写标题和描述，然后点击-“Create-pull-request”。-然后就会跳转到Pull-Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。-这里显示没有代码冲突，直接点击-“Merge-pull-request”-即可。-然后点击-“Confirm-merge”-即可完成合并。-然后就可以看到你的改动已经被合并到主分支了。"><a href="#之后访问-https-github-com-yourname-CGo-页面会提示-“Compare-pull-request”，说明你已经成功推送了分支，需要发起-Pull-Request。-点击-“Create-pull-request”，填写标题和描述，然后点击-“Create-pull-request”。-然后就会跳转到Pull-Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。-这里显示没有代码冲突，直接点击-“Merge-pull-request”-即可。-然后点击-“Confirm-merge”-即可完成合并。-然后就可以看到你的改动已经被合并到主分支了。" class="headerlink" title="- 之后访问 https://github.com/yourname/CGo- 页面会提示 “Compare &amp; pull request”，说明你已经成功推送了分支，需要发起 Pull Request。  - 点击 “Create pull request”，填写标题和描述，然后点击 “Create pull request”。- 然后就会跳转到Pull Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。- 这里显示没有代码冲突，直接点击 “Merge pull request” 即可。- 然后点击 “Confirm merge” 即可完成合并。- 然后就可以看到你的改动已经被合并到主分支了。
+  "></a><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="18.png"
+                      alt="推送到远程仓库"
+                ><br>- 之后访问 <a class="link"   target="_blank" rel="noopener" href="https://github.com/yourname/CGo" >https://github.com/yourname/CGo<i class="fa-solid fa-arrow-up-right ml-[0.2em] font-light align-text-top text-[0.7em] link-icon"></i></a><br>- 页面会提示 “Compare &amp; pull request”，说明你已经成功推送了分支，需要发起 Pull Request。<br>  <img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="19.png"
+                      alt="发起Pull Request"
+                ><br>- 点击 “Create pull request”，填写标题和描述，然后点击 “Create pull request”。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="20.png"
+                      alt="填写标题和描述"
+                ><br>- 然后就会跳转到Pull Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。<br>- 这里显示没有代码冲突，直接点击 “Merge pull request” 即可。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="21.png"
+                      alt="Merge pull request"
+                ><br>- 然后点击 “Confirm merge” 即可完成合并。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="22.png"
+                      alt="Confirm merge"
+                ><br>- 然后就可以看到你的改动已经被合并到主分支了。
+  </h2><h2 id="VS-Code-可视化工作流"><a href="#VS-Code-可视化工作流" class="headerlink" title="VS Code 可视化工作流"></a>VS Code 可视化工作流</h2><p>在刚刚克隆到本地的代码仓库，右键选择“Open with Code”，或者直接在VS Code中打开该文件夹，就可以开始可视化操作了。</p>
+<h3 id="安装必备扩展"><a href="#安装必备扩展" class="headerlink" title="安装必备扩展"></a>安装必备扩展</h3><ol>
+<li><strong>GitLens — Git supercharged</strong>：增强代码注释与历史浏览。</li>
+<li><strong>GitHub Pull Requests and Issues</strong>：在 VS Code 中直接浏览&#x2F;发起 PR。</li>
+</ol>
+<h3 id="分支与改动管理"><a href="#分支与改动管理" class="headerlink" title="分支与改动管理"></a>分支与改动管理</h3><ul>
+<li><p><strong>切换&#x2F;创建分支</strong>：</p>
+<ul>
+<li>点击下方加号 → “Create new branch” → 输入 <code>tune-mcts-2</code> → 按回车创建<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="24.png"
+                      alt="创建分支"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="25.png"
+                      alt="创建分支"
+                ><br>这里会出现三个选项，我们只需要关心前两个，分别是单纯的创建分支、创建分支并切换到该分支。</li>
+</ul>
+<p>根据自己的喜好选择即可（一般情况下，我们选择创建分支并切换到该分支）</p>
+</li>
+<li><p><strong>查看改动</strong>：</p>
+<ul>
+<li>在 <strong>源代码管理</strong> 面板能看到所有未暂存与已暂存的文件</li>
+<li>点击文件名可打开 diff 视图</li>
+</ul>
+</li>
+</ul>
+<h3 id="修改-提交-1"><a href="#修改-提交-1" class="headerlink" title="修改 &amp; 提交"></a>修改 &amp; 提交</h3><ol>
+<li><p>在资源管理器中打开 <code>src/ai.c</code>，修改参数并保存。</p>
+</li>
+<li><p>在 <strong>源代码管理</strong> 面板：</p>
+<ul>
+<li><p>将 <code>ai.c</code> 拖动到 “Staged Changes”</p>
+</li>
+<li><p>在上方输入提交信息：</p>
+<blockquote>
+<p>Tune MCTS: sim&#x3D;2000, exploration&#x3D;1.20</p>
+</blockquote>
+</li>
+<li><p>点击 ✓ 提交</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="推送-发起-PR"><a href="#推送-发起-PR" class="headerlink" title="推送 &amp; 发起 PR"></a>推送 &amp; 发起 PR</h3><ul>
+<li><p><strong>推送</strong>：顶部会出现 “Publish Branch” 按钮，点击即可。</p>
+</li>
+<li><p><strong>发起 PR</strong>：</p>
+<ul>
+<li>安装 “GitHub Pull Requests and Issues” 后，点击左侧 “GitHub” 图标</li>
+<li>选择 “Create Pull Request” → 目标库选择 <code>AstreoX/CGo</code> → 填写标题和描述 → 提交</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>通过以上 <strong>命令行 + VS Code 可视化</strong> 的方式进行版本控制，我们可以更方便地管理代码，并与他人协作。在实际开发中，我们可以根据需要灵活选择适合自己的版本控制方式，以提高开发效率。</p>
+
+		</div>
+
+		
+		<div class="post-copyright-info w-full my-8 px-2 sm:px-6 md:px-8">
+			<div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> Git与Github详解：实践篇</li>
+        <li><strong>Author:</strong> Gskyer</li>
+        <li><strong>Created at
+                :</strong> 2025-05-13 01:12:28</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2025-05-13 02:59:55
+            </li>
+        
+        <li>
+            <strong>Link:</strong> https://astreox.github.io/2025/05/13/Git与Github详解：实践篇/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+
+            
+                This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0">CC BY-NC-SA 4.0</a>.
+            
+        </li>
+    </ul>
+</div>
+
+		</div>
+		
+
+		
+		<ul class="post-tags-box text-lg mt-1.5 flex-wrap justify-center flex md:hidden">
+			
+			<li class="tag-item mx-0.5">
+				<a href="../../../../public/tags/%E6%8A%80%E6%9C%AF/">#技术</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="../../../../public/tags/Git/">#Git</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="../../../../public/tags/Github/">#Github</a>&nbsp;
+			</li>
+			
+			<li class="tag-item mx-0.5">
+				<a href="../../../../public/tags/%E6%95%99%E7%A8%8B/">#教程</a>&nbsp;
+			</li>
+			
+		</ul>
+		
+
+		
+  <div class="recommended-article px-2 sm:px-6 md:px-8">
+   <div class="recommended-desktop">
+    <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+    </div>
+    <div class="recommended-article-group"><a class="recommended-article-item" href="/2025/05/12/Git与Github详解：从入门到精通/" title="Git与Github详解：从入门到精通" rel="bookmark">
+  <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xOTM0MTk4My05YjI2Y2RkOTM3NjA0NmE4LnBuZw?x-oss-process=image/format,png" alt="Git与Github详解：从入门到精通" class="!max-w-none">
+  <span class="title">Git与Github详解：从入门到精通</span>
+</a><a class="recommended-article-item" href="/2024/10/04/hello-blog/" title="Welcome to My Blog" rel="bookmark">
+  <img src="/images/background-light.png?v=20250511" alt="Welcome to My Blog" class="!max-w-none">
+  <span class="title">Welcome to My Blog</span>
+</a><a class="recommended-article-item" href="/2025/02/07/大语言模型P1/" title="大语言模型P1" rel="bookmark">
+  <img src="https://free4.yunpng.top/2025/05/09/681d518f64783.png" alt="大语言模型P1" class="!max-w-none">
+  <span class="title">大语言模型P1</span>
+</a></div>
+   </div>
+   <div class="recommended-mobile">
+   <div class="recommended-article-header text-xl md:text-3xl font-bold mt-10">
+     <i aria-hidden="true"></i><span>推荐阅读</span>
+   </div>
+   <div class="recommended-article-group"><a class="recommended-article-item" href="/2025/05/12/Git与Github详解：从入门到精通/" title="Git与Github详解：从入门到精通" rel="bookmark">
+  <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly91cGxvYWQtaW1hZ2VzLmppYW5zaHUuaW8vdXBsb2FkX2ltYWdlcy8xOTM0MTk4My05YjI2Y2RkOTM3NjA0NmE4LnBuZw?x-oss-process=image/format,png" alt="Git与Github详解：从入门到精通" class="!max-w-none">
+  <span class="title">Git与Github详解：从入门到精通</span>
+</a><a class="recommended-article-item" href="/2024/10/04/hello-blog/" title="Welcome to My Blog" rel="bookmark">
+  <img src="/images/background-light.png?v=20250511" alt="Welcome to My Blog" class="!max-w-none">
+  <span class="title">Welcome to My Blog</span>
+</a></div>
+   </div>
+  </div>
+
+		
+		<div class="article-nav my-8 flex justify-between items-center px-2 sm:px-6 md:px-8">
+			
+			
+			<div class="article-next border-border-color shadow-redefine-flat shadow-shadow-color-2 rounded-medium px-4 py-2 hover:shadow-redefine-flat-hover hover:shadow-shadow-color-2">
+				<a class="next" rel="next" href="../../12/Git%E4%B8%8EGithub%E8%AF%A6%E8%A7%A3%EF%BC%9A%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A/">
+					<span class="title flex justify-center items-center">
+						<span class="post-nav-title-item">Git与Github详解：从入门到精通</span>
+						<span class="post-nav-item">Next posts</span>
+					</span>
+					<span class="right arrow-icon flex justify-center items-center">
+						<i class="fa-solid fa-chevron-right"></i>
+					</span>
+				</a>
+			</div>
+			
+		</div>
+		
+
+
+		
+		<div class="comment-container px-2 sm:px-6 md:px-8 pb-8">
+			<div class="comments-container mt-10 w-full ">
+    <div id="comment-anchor" class="w-full h-2.5"></div>
+    <div class="comment-area-title w-full my-1.5 md:my-2.5 text-xl md:text-3xl font-bold">
+        Comments
+    </div>
+    
+
+        
+            
+    <div id="giscus-container"></div>
+    <script data-swup-reload-script defer>
+        async function loadGiscus() {
+            const giscusConfig = {
+                'src': 'https://giscus.app/client.js',
+                'data-repo': 'AstreoX/CommentForBlog',
+                'data-repo-id': 'R_kgDOOmtGNQ',
+                'data-category': 'Announcements',
+                'data-category-id': 'DIC_kwDOOmtGNc4Cp6ym',
+                'data-mapping': 'title',
+                'data-strict': '0',
+                'data-reactions-enabled': '1',
+                'data-emit-metadata': '1',
+                'data-theme': 'preferred_color_scheme',
+                'data-lang': 'zh-CN',
+                'data-input-position': 'bottom',
+                'data-loading': 'lazy',
+                'crossorigin': 'anonymous',
+                'async': true
+            }
+            const giscusScript = document.createElement('script');
+            for (const key in giscusConfig) {
+                giscusScript.setAttribute(key, giscusConfig[key]);
+            }
+            document.getElementById('giscus-container').appendChild(giscusScript);
+        }
+        if ('true') {
+            let loadGiscusTimeout = setTimeout(() => {
+                loadGiscus();
+                clearTimeout(loadGiscusTimeout);
+            }, 1000);
+        } else {
+            document.addEventListener('DOMContentLoaded', loadGiscus);
+        }
+    </script>
+
+
+        
+        
+    
+</div>
+
+		</div>
+		
+	</div>
+
+	
+	<div class="toc-content-container">
+		<div class="post-toc-wrap">
+	<div class="post-toc">
+		<div class="toc-title">On this page</div>
+		<div class="page-title">Git与Github详解：实践篇</div>
+		<ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E5%88%9D%E5%A7%8B%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">安装与初始配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85-Git"><span class="nav-number">2.1.</span> <span class="nav-text">1. 安装 Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%85%A8%E5%B1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">2. 全局配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B3%A8%E5%86%8C-GitHub-%E8%B4%A6%E5%8F%B7"><span class="nav-number">2.3.</span> <span class="nav-text">3. 注册 GitHub 账号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fork-Clone-%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">Fork &amp; Clone 仓库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9F%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">4.</span> <span class="nav-text">传统命令行工作流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%93%E5%BA%93-%E6%B7%BB%E5%8A%A0%E4%B8%8A%E6%B8%B8"><span class="nav-number">4.1.</span> <span class="nav-text">初始化仓库 &amp; 添加上游</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86"><span class="nav-number">4.2.</span> <span class="nav-text">分支管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-%E6%8F%90%E4%BA%A4"><span class="nav-number">4.3.</span> <span class="nav-text">修改 &amp; 提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E9%80%81-%E5%8F%91%E8%B5%B7-Pull-Request"><span class="nav-number">4.4.</span> <span class="nav-text">推送 &amp; 发起 Pull Request</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%8B%E5%90%8E%E8%AE%BF%E9%97%AE-https-github-com-yourname-CGo-%E9%A1%B5%E9%9D%A2%E4%BC%9A%E6%8F%90%E7%A4%BA-%E2%80%9CCompare-pull-request%E2%80%9D%EF%BC%8C%E8%AF%B4%E6%98%8E%E4%BD%A0%E5%B7%B2%E7%BB%8F%E6%88%90%E5%8A%9F%E6%8E%A8%E9%80%81%E4%BA%86%E5%88%86%E6%94%AF%EF%BC%8C%E9%9C%80%E8%A6%81%E5%8F%91%E8%B5%B7-Pull-Request%E3%80%82-%E7%82%B9%E5%87%BB-%E2%80%9CCreate-pull-request%E2%80%9D%EF%BC%8C%E5%A1%AB%E5%86%99%E6%A0%87%E9%A2%98%E5%92%8C%E6%8F%8F%E8%BF%B0%EF%BC%8C%E7%84%B6%E5%90%8E%E7%82%B9%E5%87%BB-%E2%80%9CCreate-pull-request%E2%80%9D%E3%80%82-%E7%84%B6%E5%90%8E%E5%B0%B1%E4%BC%9A%E8%B7%B3%E8%BD%AC%E5%88%B0Pull-Request%E9%A1%B5%E9%9D%A2%EF%BC%8C%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%9C%A8%E8%BF%99%E9%87%8C%E6%9F%A5%E7%9C%8B%E4%BD%A0%E7%9A%84%E6%94%B9%E5%8A%A8%E3%80%81%E5%8F%91%E8%B5%B7%E8%AF%84%E8%AE%BA%E3%80%81%E5%8F%82%E4%B8%8E%E8%AE%A8%E8%AE%BA%E7%AD%89%E3%80%82-%E8%BF%99%E9%87%8C%E6%98%BE%E7%A4%BA%E6%B2%A1%E6%9C%89%E4%BB%A3%E7%A0%81%E5%86%B2%E7%AA%81%EF%BC%8C%E7%9B%B4%E6%8E%A5%E7%82%B9%E5%87%BB-%E2%80%9CMerge-pull-request%E2%80%9D-%E5%8D%B3%E5%8F%AF%E3%80%82-%E7%84%B6%E5%90%8E%E7%82%B9%E5%87%BB-%E2%80%9CConfirm-merge%E2%80%9D-%E5%8D%B3%E5%8F%AF%E5%AE%8C%E6%88%90%E5%90%88%E5%B9%B6%E3%80%82-%E7%84%B6%E5%90%8E%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%9C%8B%E5%88%B0%E4%BD%A0%E7%9A%84%E6%94%B9%E5%8A%A8%E5%B7%B2%E7%BB%8F%E8%A2%AB%E5%90%88%E5%B9%B6%E5%88%B0%E4%B8%BB%E5%88%86%E6%94%AF%E4%BA%86%E3%80%82"><span class="nav-number">5.</span> <span class="nav-text">- 之后访问 https:&#x2F;&#x2F;github.com&#x2F;yourname&#x2F;CGo- 页面会提示 “Compare &amp; pull request”，说明你已经成功推送了分支，需要发起 Pull Request。  - 点击 “Create pull request”，填写标题和描述，然后点击 “Create pull request”。- 然后就会跳转到Pull Request页面，你可以在这里查看你的改动、发起评论、参与讨论等。- 这里显示没有代码冲突，直接点击 “Merge pull request” 即可。- 然后点击 “Confirm merge” 即可完成合并。- 然后就可以看到你的改动已经被合并到主分支了。
+  </span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VS-Code-%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">6.</span> <span class="nav-text">VS Code 可视化工作流</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%BF%85%E5%A4%87%E6%89%A9%E5%B1%95"><span class="nav-number">6.1.</span> <span class="nav-text">安装必备扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E6%94%AF%E4%B8%8E%E6%94%B9%E5%8A%A8%E7%AE%A1%E7%90%86"><span class="nav-number">6.2.</span> <span class="nav-text">分支与改动管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9-%E6%8F%90%E4%BA%A4-1"><span class="nav-number">6.3.</span> <span class="nav-text">修改 &amp; 提交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E9%80%81-%E5%8F%91%E8%B5%B7-PR"><span class="nav-number">6.4.</span> <span class="nav-text">推送 &amp; 发起 PR</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol>
+
+	</div>
+</div>
+	</div>
+	
+</div>
+			</div>
+
+			
+		</div>
+
+		<div class="main-content-footer">
+			<footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2024</span>
+              -
+            
+            2025&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">Gskyer</a>
+            
+                
+                <p class="post-count space-x-0.5">
+                    <span>
+                        6 posts in total
+                    </span>
+                    
+                        <span>
+                            15.8k words in total
+                        </span>
+                    
+                </p>
+            
+        </div>
+        
+            <script data-swup-reload-script src="https://cn.vercount.one/js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.8.2</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+		</div>
+	</div>
+
+	
+	<div class="post-tools">
+		<div class="post-tools-container">
+	<ul class="article-tools-list">
+		<!-- TOC aside toggle -->
+		
+		<li class="right-bottom-tools page-aside-toggle">
+			<i class="fa-regular fa-outdent"></i>
+		</li>
+		
+
+		<!-- go comment -->
+		
+		<li class="go-comment">
+			<i class="fa-regular fa-comments"></i>
+		</li>
+		
+	</ul>
+</div>
+	</div>
+	
+
+	<div class="right-side-tools-container">
+		<div class="side-tools-container">
+	<ul class="hidden-tools-list">
+		<li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-plus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+			<i class="fa-regular fa-magnifying-glass-minus"></i>
+		</li>
+
+		<li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+			<i class="fa-regular fa-moon"></i>
+		</li>
+
+		<!-- rss -->
+		
+
+		
+
+		<li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+			<i class="fa-regular fa-arrow-down"></i>
+		</li>
+	</ul>
+
+	<ul class="visible-tools-list">
+		<li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+			<i class="fa-regular fa-cog fa-spin"></i>
+		</li>
+		
+		<li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+			<i class="arrow-up fas fa-arrow-up"></i>
+			<span class="percent"></span>
+		</li>
+		
+		
+	</ul>
+</div>
+	</div>
+
+	<div class="image-viewer-container">
+	<img src="">
+</div>
+
+	
+	<div class="search-pop-overlay">
+	<div class="popup search-popup">
+		<div class="search-header">
+			<span class="search-input-field-pre">
+				<i class="fa-solid fa-keyboard"></i>
+			</span>
+			<div class="search-input-container">
+				<input autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Search..." spellcheck="false" type="search" class="search-input">
+			</div>
+			<span class="popup-btn-close">
+				<i class="fa-solid fa-times"></i>
+			</span>
+		</div>
+		<div id="search-result">
+			<div id="no-result">
+				<i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+			</div>
+		</div>
+	</div>
+</div>
+	
+
+</main>
+
+
+
+<script src="js/build/libs/Swup.min.js"></script>
+
+<script src="js/build/libs/SwupSlideTheme.min.js"></script>
+
+<script src="js/build/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="js/build/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="js/build/libs/SwupScrollPlugin.min.js"></script>
+
+<script src="js/build/libs/SwupPreloadPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+            new SwupPreloadPlugin(),
+        ],
+        containers: ["#swup"],
+    });
+</script>
+
+
+
+
+	
+<script src="js/build/tools/imageViewer.js" type="module"></script>
+
+<script src="js/build/utils.js" type="module"></script>
+
+<script src="js/build/main.js" type="module"></script>
+
+<script src="js/build/layouts/navbarShrink.js" type="module"></script>
+
+<script src="js/build/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="js/build/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="js/build/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="js/build/tools/localSearch.js" type="module"></script>
+
+
+
+
+    
+<script src="js/build/tools/codeBlock.js" type="module"></script>
+
+
+
+
+    
+<script src="js/build/layouts/lazyload.js" type="module"></script>
+
+
+
+
+    
+<script src="js/build/tools/runtime.js"></script>
+
+    
+<script src="js/build/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="js/build/libs/Typed.min.js"></script>
+
+  
+<script src="js/build/plugins/typed.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+    
+<script src="js/build/tools/tocToggle.js" type="module" data-swup-reload-script=""></script>
+
+<script src="js/build/layouts/toc.js" type="module" data-swup-reload-script=""></script>
+
+<script src="js/build/plugins/tabs.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+<script src="js/build/libs/moment-with-locales.min.js" data-swup-reload-script=""></script>
+
+
+<script src="js/build/layouts/essays.js" type="module" data-swup-reload-script=""></script>
+
+
+
+
+
+    
+<script src="js/build/layouts/bookmarkNav.js" type="module"></script>
+
+
+	
+</body>
+
+</html>
